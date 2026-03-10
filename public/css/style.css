@@ -631,6 +631,8 @@ body.has-bottom-nav {
   grid-template-columns: repeat(3, 1fr);
   gap: 6px;
   margin-top: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 
 .event-pill {
