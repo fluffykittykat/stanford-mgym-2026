@@ -974,6 +974,49 @@ body.has-bottom-nav {
   color: var(--text-muted);
 }
 
+/* Tiny photos in mission control and meet detail lineup */
+.mc-tiny-photo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.mc-tiny-photo-placeholder {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--card-hover);
+  flex-shrink: 0;
+}
+
+/* Heat map photos */
+.hm-photo {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+/* Leaderboard avatars */
+.lb-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.lb-avatar-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-hover);
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
 .gymnast-name {
   font-family: var(--font-heading);
   font-size: .9rem;

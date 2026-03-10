@@ -791,9 +791,16 @@
   function renderMeetCard(m) {
     const statusBadge = getStatusBadge(m);
 
+    const mpData = meetPhotos[m.date];
+    const mpThumb = mpData?.heroImage;
+
     if (m.status === 'upcoming') {
       return `
         <div class="meet-card" data-meet-id="${m.id}" style="overflow:hidden;">
+          ${mpThumb ? `<div class="meet-card-thumb" style="position:relative;height:110px;overflow:hidden;border-radius:8px 8px 0 0;margin:-1rem -1rem 0.75rem -1rem;">
+            <img src="${mpThumb}" alt="${m.opponent}" style="width:100%;height:100%;object-fit:cover;object-position:center center;" loading="lazy" onerror="this.parentElement.style.display='none'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(16,14,11,0.95) 0%,rgba(16,14,11,0.1) 60%,transparent 100%)"></div>
+          </div>` : ''}
           <div class="meet-header">
             <div>
               <div class="meet-opponent">${m.opponent}${m.isHome ? '<span class="badge badge-home">HOME</span>' : ''} ${statusBadge}</div>
@@ -824,6 +831,10 @@
 
     return `
       <div class="meet-card${m.status === 'in_progress' ? ' meet-card-live' : ''}" data-meet-id="${m.id}" style="overflow:hidden;">
+        ${mpThumb ? `<div class="meet-card-thumb" style="position:relative;height:110px;overflow:hidden;border-radius:8px 8px 0 0;margin:-1rem -1rem 0.75rem -1rem;">
+          <img src="${mpThumb}" alt="${m.opponent}" style="width:100%;height:100%;object-fit:cover;object-position:center center;" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(16,14,11,0.95) 0%,rgba(16,14,11,0.1) 60%,transparent 100%)"></div>
+        </div>` : ''}
         <div class="meet-header">
           <div>
             <div class="meet-opponent">${m.opponent}${m.isHome ? '<span class="badge badge-home">HOME</span>' : ''} ${statusBadge}</div>
@@ -987,7 +998,10 @@
       const rows = eventAthletes.map((a, i) => `
         <tr class="lineup-row">
           <td>${i + 1}</td>
-          <td><span class="clickable-name" data-gymnast="${a.name}">${a.name}</span></td>
+          <td style="display:flex;align-items:center;gap:0.4rem;">
+            ${photos[a.name] ? `<img src="${photos[a.name]}" class="mc-tiny-photo">` : '<div class="mc-tiny-photo-placeholder"></div>'}
+            <span class="clickable-name" data-gymnast="${a.name}">${a.name}</span>
+          </td>
           <td class="score-cell">${a.scores[event].toFixed(3)}</td>
         </tr>`).join('');
 
@@ -1010,7 +1024,18 @@
 
     const resultBadge = `<span class="badge badge-${meet.result.toLowerCase()}" style="font-size:1rem;padding:0.3rem 0.8rem;">${meet.result}</span>`;
 
+    const mpData = meetPhotos[meet.date];
+    const heroImg = mpData?.heroImage;
+
     content.innerHTML = `
+      ${heroImg ? `<div class="meet-hero-photo" style="position:relative;width:100%;height:220px;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
+        <img src="${heroImg}" alt="${meet.opponent} meet" style="width:100%;height:100%;object-fit:cover;object-position:center center;" loading="lazy" onerror="this.parentElement.style.display='none'">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 50%)"></div>
+        <div style="position:absolute;bottom:0.75rem;left:1rem;right:1rem;display:flex;justify-content:space-between;align-items:flex-end;">
+          <span style="color:#fff;font-family:Oswald;font-size:1.1rem;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,0.8)">vs ${meet.opponent}</span>
+          ${mpData?.recapUrl ? `<a href="${mpData.recapUrl}" target="_blank" style="color:rgba(255,255,255,0.75);font-size:0.72rem;text-decoration:none;background:rgba(0,0,0,0.4);padding:0.2rem 0.5rem;border-radius:4px">gostanford.com →</a>` : ''}
+        </div>
+      </div>` : ''}
       <div class="detail-hero">
         <div class="meet-header">
           <div>
