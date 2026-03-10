@@ -551,6 +551,7 @@ body.has-bottom-nav {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  padding-bottom: 4px;
   transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
   cursor: pointer;
 }
@@ -633,7 +634,7 @@ body.has-bottom-nav {
   margin-top: 10px;
   margin-left: 8px;
   margin-right: 8px;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .event-pill {
