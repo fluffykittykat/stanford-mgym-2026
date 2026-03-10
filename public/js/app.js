@@ -817,11 +817,11 @@
     const eventBars = EVENTS.map(e => {
       if (!m.events || !m.events[e]) return '';
       const score = m.events[e].stanford;
-      // Color tier based on score (men's team event totals)
+      // Color tier based on men's per-event team scores (typical range 48–60)
       let pillClass = 'ep-avg';
-      if (score >= 71) pillClass = 'ep-great';
-      else if (score >= 68) pillClass = 'ep-good';
-      else if (score < 63) pillClass = 'ep-low';
+      if (score >= 56)      pillClass = 'ep-great';
+      else if (score >= 53) pillClass = 'ep-good';
+      else if (score < 50)  pillClass = 'ep-low';
       return `<div class="event-pill ${pillClass}"><span class="ep-label">${EVENT_SHORT[e]}</span><span class="ep-score">${score.toFixed(2)}</span></div>`;
     }).join('');
 
