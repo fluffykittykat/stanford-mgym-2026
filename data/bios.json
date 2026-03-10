@@ -1,0 +1,74 @@
+{
+  "Brody Malone": {
+    "hometown": "Thomasville, Georgia",
+    "classYear": "Graduate",
+    "height": "5-8",
+    "major": "Computer Science",
+    "events": "AA",
+    "funFact": "2-time World Champion, 2024 Olympic team gold medalist",
+    "position": "All-Around"
+  },
+  "Curran Phillips": {
+    "hometown": "Highland Heights, Ohio",
+    "classYear": "Senior",
+    "height": "5-8",
+    "major": "Science, Technology, and Society",
+    "events": "AA",
+    "funFact": "2021 World Championships team member",
+    "position": "All-Around"
+  },
+  "Riley Loos": {
+    "hometown": "Plano, Texas",
+    "classYear": "Junior",
+    "height": "5-9",
+    "major": "Human Biology",
+    "events": "PH, AA",
+    "funFact": "Pommel horse specialist",
+    "position": "Pommel Horse"
+  },
+  "Asher Hong": {
+    "hometown": "Allen, Texas",
+    "classYear": "Sophomore",
+    "height": "5-5",
+    "major": "Computer Science",
+    "events": "AA",
+    "funFact": "2024 Olympic team member at just 18 years old",
+    "position": "All-Around"
+  },
+  "Khoi Young": {
+    "hometown": "Katy, Texas",
+    "classYear": "Freshman",
+    "height": "5-7",
+    "major": "Undeclared",
+    "events": "VT, PB",
+    "funFact": "Vault and parallel bars specialist",
+    "position": "Vault"
+  },
+  "Bram de Vries": {
+    "hometown": "Netherlands",
+    "classYear": "Senior",
+    "height": "5-10",
+    "major": "Economics",
+    "events": "HB, PB",
+    "funFact": "International competitor representing the Netherlands",
+    "position": "High Bar"
+  },
+  "Caden Marshburn": {
+    "hometown": "Roseville, California",
+    "classYear": "Junior",
+    "height": "5-8",
+    "major": "Biomechanical Engineering",
+    "events": "SR, PH",
+    "funFact": "Can hold a perfect iron cross for 3 seconds",
+    "position": "Rings"
+  },
+  "Shane Wiskus": {
+    "hometown": "Maple Grove, Minnesota",
+    "classYear": "Graduate",
+    "height": "5-9",
+    "major": "Psychology",
+    "events": "AA",
+    "funFact": "2021 World Championships competitor",
+    "position": "All-Around"
+  }
+}
