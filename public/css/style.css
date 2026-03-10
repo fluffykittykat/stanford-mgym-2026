@@ -624,48 +624,84 @@ body.has-bottom-nav {
 }
 
 /* ----------------------------------------------------------
-   10. Event Bars
+   10. Event Pills
    ---------------------------------------------------------- */
+.event-pills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.event-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px 7px;
+  border-radius: 10px;
+  gap: 2px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.event-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+}
+
+.ep-label {
+  font-family: var(--font-heading);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .75;
+}
+
+.ep-score {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Color tiers */
+.ep-great {
+  background: linear-gradient(135deg, #1a6b3e, #27a060);
+  color: #fff;
+}
+.ep-good {
+  background: linear-gradient(135deg, #2a6496, #3a86c8);
+  color: #fff;
+}
+.ep-avg {
+  background: linear-gradient(135deg, var(--cardinal), var(--accent));
+  color: #fff;
+}
+.ep-low {
+  background: linear-gradient(135deg, #7a4a10, #b8720a);
+  color: #fff;
+}
+
+/* Legacy bar styles kept for meet detail view */
 .event-bar-item {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 8px 0;
 }
-
-.event-bar-item .eb-label {
-  width: 32px;
-  font-size: .7rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  text-align: right;
-  flex-shrink: 0;
-}
-
 .event-bar-track {
   flex: 1;
   height: 8px;
   background: var(--border);
   border-radius: 4px;
   overflow: hidden;
-  position: relative;
 }
-
 .event-bar-fill {
   height: 100%;
   border-radius: 4px;
   background: linear-gradient(90deg, var(--cardinal), var(--accent));
   transition: width .6s ease;
-}
-
-.event-bar-item .eb-value {
-  width: 44px;
-  font-size: .8rem;
-  font-weight: 600;
-  color: var(--text);
-  text-align: left;
-  flex-shrink: 0;
 }
 
 /* ----------------------------------------------------------

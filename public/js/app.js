@@ -816,17 +816,13 @@
 
     const eventBars = EVENTS.map(e => {
       if (!m.events || !m.events[e]) return '';
-      const pct = ((m.events[e].stanford / 72) * 100).toFixed(1);
-      return `
-        <div class="event-bar-item">
-          <div class="event-bar-label">
-            <span>${EVENT_SHORT[e]}</span>
-            <span>${m.events[e].stanford.toFixed(2)}</span>
-          </div>
-          <div class="event-bar-track">
-            <div class="event-bar-fill" style="width: ${pct}%"></div>
-          </div>
-        </div>`;
+      const score = m.events[e].stanford;
+      // Color tier based on score (men's team event totals)
+      let pillClass = 'ep-avg';
+      if (score >= 71) pillClass = 'ep-great';
+      else if (score >= 68) pillClass = 'ep-good';
+      else if (score < 63) pillClass = 'ep-low';
+      return `<div class="event-pill ${pillClass}"><span class="ep-label">${EVENT_SHORT[e]}</span><span class="ep-score">${score.toFixed(2)}</span></div>`;
     }).join('');
 
     return `
@@ -848,7 +844,7 @@
           <div class="score-vs">vs</div>
           <div class="team-score"><div class="team-name">Opponent</div><div class="score">${m.opponentScore.toFixed(2)}</div></div>
         </div>
-        <div class="event-bars">${eventBars}</div>
+        <div class="event-pills-grid">${eventBars}</div>
       </div>`;
   }
 
