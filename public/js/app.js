@@ -911,45 +911,49 @@
       `<div class="insight-headline">${evWon > evLost ? '✅' : '❌'} Stanford <strong>won ${evWon}</strong> rotation${evWon!==1?'s':''}, lost <strong>${evLost}</strong></div>`,
     ].filter(Boolean).join('');
 
-    const evRows = evPerf.map(e => {
-      const diffColor = e.diff===null?'#aaa':e.diff>0?'#2ecc71':'#e74c3c';
-      const rotBadge = e.wonRot
-        ? '<span style="color:#2ecc71;font-size:0.7rem;font-weight:700">WON</span>'
-        : '<span style="color:#e74c3c;font-size:0.7rem;font-weight:700">LOST</span>';
+    const evCards = evPerf.map(e => {
+      const aboveAvg = e.diff!==null && e.diff>0;
+      const bg = e.wonRot
+        ? (aboveAvg ? 'linear-gradient(135deg,#1a6b3e,#27a060)' : 'linear-gradient(135deg,#2a6496,#3a86c8)')
+        : (aboveAvg ? 'linear-gradient(135deg,#7a5a10,#c9920a)' : 'linear-gradient(135deg,#6b1515,#8C1515)');
+      const badgeTxt = e.wonRot ? 'WON' : 'LOST';
       return `
-        <div class="mi-ev-row">
-          <div class="mi-ev-label"><span style="font-family:Oswald;color:var(--accent)">${EV_LBL[e.ev]}</span>${rotBadge}</div>
-          <div class="mi-ev-scores">
-            <span style="font-family:Oswald;font-weight:700;font-size:1.1rem">${mfmt(e.today)}</span>
-            <span style="color:${diffColor};font-size:0.8rem;font-weight:600">${e.diff!==null?mdiff(e.diff):'no baseline'} vs avg</span>
-            <span style="color:var(--text-muted);font-size:0.75rem">opp: ${mfmt(e.opp)}</span>
+        <div class="ev-perf-card" style="background:${bg}">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="ev-pc-event">${EV_LBL[e.ev]}</span>
+            <span class="ev-pc-badge">${badgeTxt}</span>
           </div>
+          <div class="ev-pc-score">${mfmt(e.today)}</div>
+          <div class="ev-pc-delta" style="opacity:${e.diff===null?0.5:0.8}">${e.diff!==null?mdiff(e.diff):'no baseline'} vs avg</div>
+          <div class="ev-pc-opp">opp: ${mfmt(e.opp)}</div>
         </div>`;
     }).join('');
 
-    const gcRows = gameChangers.slice(0,8).map(g => `
-      <div class="mi-gc-row">
-        <span class="clickable-name" data-gymnast="${g.name}">${g.name}</span>
-        <span style="font-size:0.75rem;color:var(--text-muted)">${EV_LBL[g.ev]}</span>
-        <span style="font-family:Oswald">${mfmt(g.today)}</span>
-        <span style="color:${g.delta>0.02?'#2ecc71':g.delta<-0.02?'#e74c3c':'#aaa'};font-weight:600">${mdiff(g.delta)}</span>
-      </div>`).join('');
+    const gcCards = gameChangers.slice(0,6).map(g => {
+      const borderColor = g.delta>0.02?'#2ecc71':g.delta<-0.02?'#e74c3c':'#888';
+      const pillBg = g.delta>0.02?'rgba(46,204,113,0.15)':g.delta<-0.02?'rgba(231,76,60,0.15)':'rgba(136,136,136,0.12)';
+      const pillColor = g.delta>0.02?'#1a9a5a':g.delta<-0.02?'#c0392b':'#666';
+      return `
+        <div class="gc-card" style="border-left:3px solid ${borderColor}">
+          <div class="gc-left">
+            <span class="gc-name clickable-name" data-gymnast="${g.name}">${g.name}</span>
+            <span class="gc-event">${EV_LBL[g.ev]}</span>
+          </div>
+          <div class="gc-right">
+            <span class="gc-score">${mfmt(g.today)}</span>
+            <span class="gc-delta-pill" style="background:${pillBg};color:${pillColor}">${mdiff(g.delta)}</span>
+          </div>
+        </div>`;
+    }).join('');
 
     return `
       <div class="section-card meet-insights-card">
         <h2 class="section-title">📊 Meet Analysis</h2>
         <div class="mi-headlines">${headlines}</div>
-        <div class="mi-two-col">
-          <div>
-            <div class="mi-subtitle">Event Performance vs Season Avg</div>
-            <div class="mi-ev-list">${evRows}</div>
-          </div>
-          <div>
-            <div class="mi-subtitle">Game Changers (vs personal avg)</div>
-            <div class="mi-gc-header"><span>Gymnast</span><span>Event</span><span>Score</span><span>Δ</span></div>
-            ${gcRows}
-          </div>
-        </div>
+        <div class="mi-subtitle" style="padding:0 16px;margin-top:8px">Event Performance vs Season Avg</div>
+        <div class="ev-perf-grid">${evCards}</div>
+        <div class="mi-subtitle" style="padding:0 16px;margin-top:12px">Game Changers (vs personal avg)</div>
+        <div class="gc-grid">${gcCards}</div>
       </div>`;
   }
 

@@ -1914,49 +1914,105 @@ body.has-bottom-nav {
   flex-shrink: 0;
 }
 
-.mi-ev-row {
+/* Event Performance Card Grid */
+.ev-perf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px 16px 16px;
+}
+.ev-perf-card {
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.ev-pc-event {
+  font-family: Oswald, var(--font-heading);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+.ev-pc-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.22);
+  padding: 1px 7px;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+}
+.ev-pc-score {
+  font-family: Oswald, var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.ev-pc-delta {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+.ev-pc-opp {
+  font-size: 0.7rem;
+  opacity: 0.55;
+  margin-top: 2px;
+}
+@media (max-width: 600px) {
+  .ev-perf-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Game Changer Card Grid */
+.gc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px 16px 16px;
+}
+.gc-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 16px;
-  border-bottom: 1px solid rgba(61, 50, 40, .3);
-  font-size: .85rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
 }
-.mi-ev-row:last-child {
-  border-bottom: none;
+.gc-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
-.mi-ev-row .mi-ev-name {
+.gc-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.gc-event {
+  font-size: 0.7rem;
   color: var(--text-muted);
-  text-transform: uppercase;
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .04em;
 }
-.mi-ev-row .mi-ev-score {
-  font-family: var(--font-heading);
+.gc-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+}
+.gc-score {
+  font-family: Oswald, var(--font-heading);
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text);
 }
-
-.mi-gc-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 16px;
-  border-bottom: 1px solid rgba(61, 50, 40, .3);
-  font-size: .85rem;
+.gc-delta-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 6px;
 }
-.mi-gc-row:last-child {
-  border-bottom: none;
-}
-.mi-gc-row .mi-gc-name {
-  flex: 1;
-  color: var(--text);
-}
-.mi-gc-row .mi-gc-score {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  color: var(--cardinal);
+@media (max-width: 600px) {
+  .gc-grid { grid-template-columns: 1fr; }
 }
 
 /* ----------------------------------------------------------
