@@ -1,74 +1,173 @@
 {
-  "Brody Malone": {
-    "hometown": "Thomasville, Georgia",
-    "classYear": "Graduate",
-    "height": "5-8",
-    "major": "Computer Science",
-    "events": "AA",
-    "funFact": "2-time World Champion, 2024 Olympic team gold medalist",
-    "position": "All-Around"
-  },
-  "Curran Phillips": {
-    "hometown": "Highland Heights, Ohio",
-    "classYear": "Senior",
-    "height": "5-8",
-    "major": "Science, Technology, and Society",
-    "events": "AA",
-    "funFact": "2021 World Championships team member",
-    "position": "All-Around"
-  },
-  "Riley Loos": {
-    "hometown": "Plano, Texas",
-    "classYear": "Junior",
-    "height": "5-9",
-    "major": "Human Biology",
-    "events": "PH, AA",
-    "funFact": "Pommel horse specialist",
-    "position": "Pommel Horse"
-  },
   "Asher Hong": {
-    "hometown": "Allen, Texas",
-    "classYear": "Sophomore",
+    "hometown": "Tomball, Texas",
+    "classYear": "Senior",
+    "height": "5-1",
+    "major": "Science, Technology & Society",
+    "events": "AA",
+    "funFact": "2024 Olympic Bronze Medalist for Team USA",
+    "position": "All-Around"
+  },
+  "Nicolas Kuebler": {
+    "hometown": "Seattle, Wash.",
+    "classYear": "Redshirt Senior",
     "height": "5-5",
     "major": "Computer Science",
-    "events": "AA",
-    "funFact": "2024 Olympic team member at just 18 years old",
+    "events": "FX, SR, HB",
+    "funFact": "Three-time NCAA team champion (2022-24)",
     "position": "All-Around"
   },
-  "Khoi Young": {
-    "hometown": "Katy, Texas",
-    "classYear": "Freshman",
-    "height": "5-7",
-    "major": "Undeclared",
-    "events": "VT, PB",
-    "funFact": "Vault and parallel bars specialist",
-    "position": "Vault"
+  "Arun Chhetri": {
+    "hometown": "Culver City, Calif.",
+    "classYear": "Senior",
+    "height": "5-6",
+    "major": "Biomechanical Engineering",
+    "events": "PH, SR",
+    "funFact": "NCAA All-American on still rings (2024)",
+    "position": "Still Rings"
   },
-  "Bram de Vries": {
-    "hometown": "Netherlands",
+  "Marcus Kushner": {
+    "hometown": "Hillsborough, Calif.",
     "classYear": "Senior",
     "height": "5-10",
     "major": "Economics",
-    "events": "HB, PB",
-    "funFact": "International competitor representing the Netherlands",
+    "events": "PH",
+    "funFact": "Two-time NCAA team champion, pommel horse specialist",
+    "position": "Pommel Horse"
+  },
+  "David Shamah": {
+    "hometown": "McKinney, Texas",
+    "classYear": "Junior",
+    "height": "5-6",
+    "major": "Human Biology",
+    "events": "PH, PB",
+    "funFact": "Two-time First Team All-America Scholar-Athlete",
+    "position": "Pommel Horse"
+  },
+  "Zach Green": {
+    "hometown": "San Jose, Calif.",
+    "classYear": "Junior",
+    "height": "5-7",
+    "major": "Symbolic Systems",
+    "events": "AA",
+    "funFact": "Two-time CGA First Team All-America Scholar-Athlete",
+    "position": "All-Around"
+  },
+  "Toma Murakawa": {
+    "hometown": "Van Nuys, Calif.",
+    "classYear": "Junior",
+    "height": "5-4",
+    "major": "Computer Science",
+    "events": "FX, VT, PB",
+    "funFact": "Known for explosive tumbling on floor exercise",
+    "position": "All-Around"
+  },
+  "Reece Landsperger": {
+    "hometown": "Chandler, Ariz.",
+    "classYear": "Junior",
+    "height": "5-7",
+    "major": "Management Science & Engineering",
+    "events": "VT, PB, HB",
+    "funFact": "Three-event contributor with a growing high bar repertoire",
+    "position": "All-Around"
+  },
+  "Xander Hong": {
+    "hometown": "Tomball, Texas",
+    "classYear": "Sophomore",
+    "height": "5-3",
+    "major": "Undeclared",
+    "events": "AA",
+    "funFact": "CGA First Team All-America Scholar-Athlete; Asher Hong's brother",
+    "position": "All-Around"
+  },
+  "Cooper Kim": {
+    "hometown": "Grand Ledge, Mich.",
+    "classYear": "Sophomore",
+    "height": "5-5",
+    "major": "Mechanical Engineering",
+    "events": "FX, VT, SR",
+    "funFact": "Two-time MPSF Freshman of the Week in 2025",
+    "position": "All-Around"
+  },
+  "Kai Uemura": {
+    "hometown": "Chicago, Ill.",
+    "classYear": "Sophomore",
+    "height": "5-3",
+    "major": "Computer Science",
+    "events": "PH, PB, HB",
+    "funFact": "First Team All-America Scholar-Athlete",
+    "position": "All-Around"
+  },
+  "Wade Nelson": {
+    "hometown": "Tustin, Calif.",
+    "classYear": "Sophomore",
+    "height": "5-7",
+    "major": "Biology",
+    "events": "SR, HB",
+    "funFact": "CGA First Team All-America Scholar-Athlete",
     "position": "High Bar"
   },
-  "Caden Marshburn": {
-    "hometown": "Roseville, California",
-    "classYear": "Junior",
+  "Marcus Pietarinen": {
+    "hometown": "Sipoo, Finland",
+    "classYear": "Sophomore",
     "height": "5-8",
-    "major": "Biomechanical Engineering",
-    "events": "SR, PH",
-    "funFact": "Can hold a perfect iron cross for 3 seconds",
-    "position": "Rings"
-  },
-  "Shane Wiskus": {
-    "hometown": "Maple Grove, Minnesota",
-    "classYear": "Graduate",
-    "height": "5-9",
-    "major": "Psychology",
-    "events": "AA",
-    "funFact": "2021 World Championships competitor",
+    "major": "Economics",
+    "events": "FX, VT, PB",
+    "funFact": "International competitor from Finland",
     "position": "All-Around"
+  },
+  "Kiran Mandava": {
+    "hometown": "Cypress, Texas",
+    "classYear": "Sophomore",
+    "height": "5-5",
+    "major": "Bioengineering",
+    "events": "PH, SR",
+    "funFact": "Versatile ring and pommel contributor",
+    "position": "Still Rings"
+  },
+  "Jun Iwai": {
+    "hometown": "Dallas, Texas",
+    "classYear": "Freshman",
+    "height": "5-4",
+    "major": "Undeclared",
+    "events": "AA",
+    "funFact": "Highly-recruited all-arounder from Dallas",
+    "position": "All-Around"
+  },
+  "Joey Nieves": {
+    "hometown": "Littleton, Colo.",
+    "classYear": "Freshman",
+    "height": "5-6",
+    "major": "Undeclared",
+    "events": "FX, VT",
+    "funFact": "Dynamic tumbler and vault specialist",
+    "position": "Vault"
+  },
+  "Divier Ramos-Delgado": {
+    "hometown": "Methuen, Mass.",
+    "classYear": "Freshman",
+    "height": "5-7",
+    "major": "Undeclared",
+    "events": "PB, HB",
+    "funFact": "Strong bar worker from the East Coast",
+    "position": "Parallel Bars"
+  },
+  "Deano Roberts": {
+    "hometown": "Palo Alto, Calif.",
+    "classYear": "Freshman",
+    "height": "5-6",
+    "major": "Undeclared",
+    "events": "FX, VT",
+    "funFact": "Local product from Palo Alto",
+    "position": "Floor"
+  },
+  "Michael Scheiner": {
+    "hometown": "Great Falls, Va.",
+    "classYear": "Freshman",
+    "height": "5-7",
+    "major": "Undeclared",
+    "events": "SR, HB",
+    "funFact": "Strong on rings with a developing high bar set",
+    "position": "Still Rings"
   }
 }

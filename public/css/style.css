@@ -1523,7 +1523,15 @@ body.has-bottom-nav {
 .toast.toast-info {
   border-left: 3px solid var(--blue);
 }
-.toast.toast-hide {
+.toast.toast-live {
+  border-left: 3px solid #ff4444;
+  background: rgba(255, 68, 68, .08);
+}
+.toast.toast-default {
+  border-left: 3px solid var(--accent);
+}
+.toast.toast-hide,
+.toast.toast-exit {
   opacity: 0;
   transform: translateX(30px);
   transition: all .3s ease;
@@ -2171,7 +2179,8 @@ body.has-bottom-nav {
 }
 
 /* Utility: apply score flash */
-.score-flash {
+.score-flash,
+.score-updated {
   animation: score-updated .8s ease;
 }
 

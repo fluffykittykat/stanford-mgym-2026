@@ -749,7 +749,7 @@
     container.innerHTML = `
       <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">
         ${yGridLines}
-        <path d="${pathD}" fill="none" stroke="var(--orange)" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="${pathD}" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>
         ${dots}
         ${yLabels}
         ${xLabels}
@@ -911,7 +911,7 @@
         : '<span style="color:#e74c3c;font-size:0.7rem;font-weight:700">LOST</span>';
       return `
         <div class="mi-ev-row">
-          <div class="mi-ev-label"><span style="font-family:Oswald;color:var(--orange)">${EV_LBL[e.ev]}</span>${rotBadge}</div>
+          <div class="mi-ev-label"><span style="font-family:Oswald;color:var(--accent)">${EV_LBL[e.ev]}</span>${rotBadge}</div>
           <div class="mi-ev-scores">
             <span style="font-family:Oswald;font-weight:700;font-size:1.1rem">${mfmt(e.today)}</span>
             <span style="color:${diffColor};font-size:0.8rem;font-weight:600">${e.diff!==null?mdiff(e.diff):'no baseline'} vs avg</span>
@@ -995,7 +995,7 @@
         <div class="detail-event-card">
           <div class="detail-event-title">${EVENT_NAMES[event]}</div>
           <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
-            <span style="color:var(--orange);font-family:Oswald;font-weight:600;">${stanScore.toFixed(2)}</span>
+            <span style="color:var(--accent);font-family:Oswald;font-weight:600;">${stanScore.toFixed(2)}</span>
             <span style="color:var(--text-muted);font-size:0.85rem;">vs ${oppScore.toFixed(2)}</span>
           </div>
           <div class="event-bar-track" style="margin-bottom:0.75rem;">
@@ -1101,7 +1101,7 @@
 
       if (p.bioOnly) {
         const bio = bios[p.name] || {};
-        const pos = bio.position ? `<span class="event-badge" style="background:var(--orange-dark);color:#fff">${bio.position}</span>` : '';
+        const pos = bio.position ? `<span class="event-badge" style="background:var(--cardinal);color:#fff">${bio.position}</span>` : '';
         const yr = bio.classYear ? `<span class="event-badge">${bio.classYear}</span>` : '';
         return `
           <div class="gymnast-card" data-gymnast="${p.name}" style="opacity:0.75">
@@ -1178,7 +1178,7 @@
       if (!p.averages[event]) return '';
       return `
         <div class="profile-stat">
-          <div class="stat-value" style="color:var(--orange)">${p.averages[event].toFixed(3)}</div>
+          <div class="stat-value" style="color:var(--accent)">${p.averages[event].toFixed(3)}</div>
           <div class="stat-label">${EVENT_NAMES[event]} Avg</div>
         </div>
         <div class="profile-stat">
@@ -1446,7 +1446,7 @@
     const pathD = scores.map((s, i) => `${i === 0 ? 'M' : 'L'}${xScale(i).toFixed(1)},${yScale(s).toFixed(1)}`).join(' ');
 
     const dots = scores.map((s, i) => `
-      <circle cx="${xScale(i).toFixed(1)}" cy="${yScale(s).toFixed(1)}" r="4" fill="var(--orange)" stroke="var(--dark)" stroke-width="2">
+      <circle cx="${xScale(i).toFixed(1)}" cy="${yScale(s).toFixed(1)}" r="4" fill="var(--accent)" stroke="var(--dark)" stroke-width="2">
         <title>${labels[i]}: ${s.toFixed(3)}</title>
       </circle>`).join('');
 
@@ -1454,7 +1454,7 @@
       <text x="${xScale(i).toFixed(1)}" y="${h - 2}" text-anchor="middle" fill="#999" font-size="8" font-family="Inter">${labels[i]}</text>`).join('');
 
     return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">
-      <path d="${pathD}" fill="none" stroke="var(--orange)" stroke-width="2" opacity="0.6"/>
+      <path d="${pathD}" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.6"/>
       ${dots}
       ${xLabels}
     </svg>`;
@@ -1674,7 +1674,7 @@
                 <span class="clickable-name" data-gymnast="${g.name}">${medal} ${g.name}</span>
                 <span>${fmt(g.avg)}</span>
                 <span class="cons-bar-wrap">${barHtml}</span>
-                <span style="color:var(--orange);font-weight:600">${g.sd.toFixed(3)} SD</span>
+                <span style="color:var(--accent);font-weight:600">${g.sd.toFixed(3)} SD</span>
               </div>`;
             }).join('')}
           </div>
@@ -1775,34 +1775,34 @@
   function renderCorrelationCards() {
     const cards = [
       {
-        title: 'The Brody Malone Effect',
-        icon: '🏋️',
+        title: 'The Anchor Effect',
+        icon: '⚓',
         color: '#8C1515',
-        body: `On days when Brody competes High Bar first, Stanford scores <strong>4.2pts higher</strong> on Floor. It's not causation — but it might be contagion. When the best gymnast in America opens with a 14.8 on HB, the whole team catches fire.`,
-        stat: 'r = 0.89',
+        body: `When Stanford competes anchor position on Floor, the team scores <strong>3.8 pts higher</strong> overall. r=0.87. It's the gymnastics equivalent of a closer in baseball — except instead of a fastball, it's a double layout with a full twist.`,
+        stat: 'r = 0.87',
         statColor: '#2ecc71'
       },
       {
         title: 'Palo Alto Cortado Coefficient',
         icon: '☕',
         color: '#6F4E37',
-        body: `Team score <strong>inversely correlates</strong> with the number of artisanal coffee shops within 3 miles of the venue. More pour-over options = lower scores. Burnham Pavilion is surrounded by 47 cafés. Road meets in Columbus? Two Starbucks. Stanford scored 401 there.`,
-        stat: 'r = -0.71',
+        body: `Team scores <strong>inversely correlate</strong> with artisanal coffee shops within 3 miles of the venue. r=−0.71. Away meets near downtown areas tank the scores. Burnham Pavilion is surrounded by 47 cafés, but the home court advantage cancels it out.`,
+        stat: 'r = −0.71',
         statColor: '#e74c3c'
       },
       {
         title: 'GPT Jinx',
         icon: '🤖',
         color: '#74AA9C',
-        body: `Every time a gymnast has admitted to using AI to "optimize their routine" the night before a meet, the team has lost. <strong>3 for 3.</strong> The AI suggested Asher add a triple back on floor. He did not. They lost anyway. Correlation? Curse? You decide.`,
-        stat: '3/3 confirmed',
+        body: `Every time a gymnast mentions using AI to optimize their routine the night before, the team loses. <strong>3/3 losses confirmed.</strong> The robots are watching. Asher tried ChatGPT for his floor music selection. Stanford lost by 0.57.`,
+        stat: '3/3 confirmed losses',
         statColor: '#e74c3c'
       },
       {
         title: 'Sequoia Tree Energy',
         icon: '🌲',
         color: '#228B22',
-        body: `Home meets at Burnham Pavilion — surrounded by exactly <strong>312 trees</strong> on the Stanford campus quad — average <strong>14.3 pts higher</strong> per meet than away meets. The trees aren't cheering, but the numbers don't lie. Photosynthesis-powered gymnastics.`,
+        body: `Home meets at Burnham Pavilion avg <strong>14.3 pts higher</strong> than away. The pavilion is surrounded by <strong>312 trees</strong>. Scientists baffled. Arborists are not. Photosynthesis-powered gymnastics is Stanford's secret weapon.`,
         stat: '+14.3 pts at home',
         statColor: '#2ecc71'
       },
@@ -1810,7 +1810,7 @@
         title: 'The Big Game Bump',
         icon: '🏈',
         color: '#8C1515',
-        body: `When Stanford beats Cal in football, the gymnastics team goes <strong>undefeated at home</strong> in the following season. When they lose The Big Game? Home record drops to .500. The football team is literally carrying the gymnastics vibe. Beat Cal = beat everyone.`,
+        body: `In years Stanford beats Cal in football, the gymnastics team goes <strong>undefeated at home</strong>. This year's football result... complicated. The Big Game energy is real — it just doesn't always transfer across sports.`,
         stat: 'Undefeated at home post-Big Game W',
         statColor: '#2ecc71'
       },
@@ -1818,15 +1818,15 @@
         title: 'GPA Trajectory',
         icon: '📐',
         color: '#3498db',
-        body: `Engineering majors score <strong>0.3 pts higher</strong> on Pommel Horse but <strong>0.4 pts lower</strong> on Floor. The theory: pommel requires mechanical precision (engineer brain), while floor demands artistic expression (not engineer brain). Brody Malone (CS major) is the exception that proves the rule.`,
-        stat: 'PH +0.3 / FX -0.4',
+        body: `Engineering majors score <strong>0.3 pts higher</strong> on Pommel but <strong>0.4 pts lower</strong> on Floor. Data suggests engineers overthink their dance moves. CS majors excel on rings (structured, logical) but struggle with floor choreography.`,
+        stat: 'PH +0.3 / FX −0.4',
         statColor: '#f39c12'
       },
       {
         title: 'Avocado Toast Index',
         icon: '🥑',
         color: '#27ae60',
-        body: `Stanford's team total correlates with Bay Area avocado prices at Whole Foods. When avocados are expensive ($2.50+), the team scores higher. When they're cheap, scores dip. We can't explain it. We just report it. <em>"Toast of champions."</em>`,
+        body: `Team total correlates with Bay Area avocado prices. r=0.82. Economist calls it <em>"the toast of champions."</em> When Whole Foods avocados hit $2.50+, Stanford scores spike. Cheap guac = cheap scores. We don't make the rules.`,
         stat: 'r = 0.82',
         statColor: '#2ecc71'
       },
@@ -1834,23 +1834,23 @@
         title: 'Full Moon Flux',
         icon: '🌕',
         color: '#9b59b6',
-        body: `Stanford has <strong>never lost a home meet during a full moon</strong>. The sample size is small (4 meets), but the streak is real. The next full moon falls on <strong>NCAA Regionals weekend</strong>. If Stanford hosts, the moon is their 7th man.`,
-        stat: '4-0 under full moons at home',
+        body: `Stanford has <strong>never lost a home meet during a full moon</strong>. The sample size is small, but the streak is perfect. Next full moon = <strong>NCAA Regionals weekend</strong>. If Stanford hosts, the moon is their 7th man.`,
+        stat: 'Undefeated under full moons at home',
         statColor: '#2ecc71'
       },
       {
         title: 'LinkedIn Post Lag',
         icon: '💼',
         color: '#0077B5',
-        body: `Meets within <strong>48 hours</strong> of the Stanford Athletic Department posting a LinkedIn "excellence in athletics" update show a <strong>2.1-point dip</strong> in team score. The jinx is corporate. Every time they post about "world-class student-athletes," the universe corrects.`,
-        stat: '-2.1 pts post-LinkedIn',
+        body: `Meets within <strong>48hrs</strong> of the athletic dept's LinkedIn "excellence" posts show a <strong>2.1pt scoring dip</strong>. Too busy writing congratulatory comments. Corporate jinx is real — the algorithm giveth and the algorithm taketh away.`,
+        stat: '−2.1 pts post-LinkedIn',
         statColor: '#e74c3c'
       },
       {
         title: 'Silicon Valley Mindfulness Paradox',
         icon: '🧘',
         color: '#e67e22',
-        body: `Gymnasts who meditate <strong>20+ minutes per day</strong> score better on all events <strong>EXCEPT pommel horse</strong> (−0.6 avg). The theory: mindfulness helps everywhere — but pommel requires chaotic energy, not calm. You can't zen your way through a flare combination.`,
+        body: `Athletes meditating <strong>20+ min/day</strong> score better on all events <strong>EXCEPT pommel</strong> (−0.6 pts). Too zen, not enough controlled chaos. You can't om your way through a flare combination. The pommel horse demands rage.`,
         stat: 'All events ↑ except PH (−0.6)',
         statColor: '#f39c12'
       }

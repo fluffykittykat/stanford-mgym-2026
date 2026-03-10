@@ -1,474 +1,183 @@
 [
   {
-    "id": "usc-jan-17",
-    "date": "2026-01-17",
-    "opponent": "USC",
-    "location": "Burnham Pavilion, Stanford, CA",
-    "isHome": true,
-    "result": "W",
-    "stanfordScore": 405.25,
-    "opponentScore": 398.75,
-    "events": {
-      "floor": { "stanford": 67.60, "opponent": 66.45 },
-      "pommel": { "stanford": 66.15, "opponent": 65.30 },
-      "rings": { "stanford": 67.85, "opponent": 66.90 },
-      "vault": { "stanford": 68.50, "opponent": 67.20 },
-      "pbars": { "stanford": 67.75, "opponent": 66.50 },
-      "hbar": { "stanford": 67.40, "opponent": 66.40 }
-    },
-    "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.35, "vault": 14.55, "hbar": 14.20 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "floor": 13.85, "rings": 14.05, "pbars": 13.90 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 14.15 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 14.20, "vault": 14.40, "pbars": 14.10 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 13.95, "pbars": 13.75 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 13.90, "pbars": 13.65 }
-      },
-      {
-        "name": "Caden Marshburn",
-        "team": "Stanford",
-        "scores": { "rings": 13.70, "pommel": 13.55 }
-      }
-    ]
-  },
-  {
-    "id": "ohio-state-jan-23",
-    "date": "2026-01-23",
-    "opponent": "Ohio State",
-    "location": "St. John Arena, Columbus, OH",
-    "isHome": false,
-    "result": "L",
-    "stanfordScore": 401.45,
-    "opponentScore": 407.85,
-    "events": {
-      "floor": { "stanford": 66.80, "opponent": 68.10 },
-      "pommel": { "stanford": 65.55, "opponent": 67.25 },
-      "rings": { "stanford": 67.20, "opponent": 68.40 },
-      "vault": { "stanford": 67.90, "opponent": 68.05 },
-      "pbars": { "stanford": 67.10, "opponent": 68.55 },
-      "hbar": { "stanford": 66.90, "opponent": 67.50 }
-    },
-    "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.10, "rings": 14.00, "vault": 14.35, "hbar": 13.95 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "floor": 13.65, "pommel": 13.40, "pbars": 13.80 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 13.85 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 13.95, "vault": 14.25, "pbars": 14.00 }
-      },
-      {
-        "name": "Shane Wiskus",
-        "team": "Stanford",
-        "scores": { "floor": 13.55, "rings": 13.70, "vault": 13.80 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 13.75, "pbars": 13.50 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 13.70, "pbars": 13.60 }
-      }
-    ]
-  },
-  {
-    "id": "air-force-jan-30",
-    "date": "2026-01-30",
-    "opponent": "Air Force",
-    "location": "Burnham Pavilion, Stanford, CA",
-    "isHome": true,
-    "result": "W",
-    "stanfordScore": 408.10,
-    "opponentScore": 391.30,
-    "events": {
-      "floor": { "stanford": 68.05, "opponent": 65.10 },
-      "pommel": { "stanford": 66.70, "opponent": 64.55 },
-      "rings": { "stanford": 68.20, "opponent": 65.40 },
-      "vault": { "stanford": 68.75, "opponent": 66.25 },
-      "pbars": { "stanford": 68.10, "opponent": 65.00 },
-      "hbar": { "stanford": 68.30, "opponent": 65.00 }
-    },
-    "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.45, "vault": 14.60, "rings": 14.15, "hbar": 14.30 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "floor": 13.90, "rings": 14.10, "pbars": 14.05 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 14.25, "vault": 14.45, "pbars": 14.20 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 14.25 }
-      },
-      {
-        "name": "Caden Marshburn",
-        "team": "Stanford",
-        "scores": { "rings": 13.80, "pommel": 13.65 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 14.05, "pbars": 13.85 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 14.10, "pbars": 13.75 }
-      }
-    ]
-  },
-  {
-    "id": "san-jose-state-feb-7",
-    "date": "2026-02-07",
-    "opponent": "San Jose State",
-    "location": "Yoshihiro Uchida Hall, San Jose, CA",
-    "isHome": false,
-    "result": "W",
-    "stanfordScore": 412.65,
-    "opponentScore": 395.20,
-    "events": {
-      "floor": { "stanford": 68.95, "opponent": 65.80 },
-      "pommel": { "stanford": 67.40, "opponent": 65.10 },
-      "rings": { "stanford": 68.60, "opponent": 66.00 },
-      "vault": { "stanford": 69.20, "opponent": 66.50 },
-      "pbars": { "stanford": 68.80, "opponent": 65.90 },
-      "hbar": { "stanford": 69.70, "opponent": 65.90 }
-    },
-    "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.50, "vault": 14.65, "hbar": 14.55, "rings": 14.20 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 14.35, "vault": 14.50, "pbars": 14.30, "hbar": 14.15 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "rings": 14.15, "pbars": 14.10, "floor": 14.00 }
-      },
-      {
-        "name": "Shane Wiskus",
-        "team": "Stanford",
-        "scores": { "floor": 13.80, "vault": 14.00, "rings": 13.85 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 14.35 }
-      },
-      {
-        "name": "Caden Marshburn",
-        "team": "Stanford",
-        "scores": { "pommel": 13.75, "rings": 13.90 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 14.10, "pbars": 13.95 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 14.25, "pbars": 13.80 }
-      }
-    ]
-  },
-  {
-    "id": "naval-academy-feb-14",
-    "date": "2026-02-14",
-    "opponent": "Naval Academy",
-    "location": "Burnham Pavilion, Stanford, CA",
-    "isHome": true,
-    "result": "W",
-    "stanfordScore": 415.30,
-    "opponentScore": 388.55,
-    "events": {
-      "floor": { "stanford": 69.30, "opponent": 64.80 },
-      "pommel": { "stanford": 68.00, "opponent": 63.75 },
-      "rings": { "stanford": 69.10, "opponent": 65.00 },
-      "vault": { "stanford": 69.50, "opponent": 65.50 },
-      "pbars": { "stanford": 69.40, "opponent": 64.90 },
-      "hbar": { "stanford": 70.00, "opponent": 64.60 }
-    },
-    "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.55, "vault": 14.70, "hbar": 14.65, "rings": 14.30 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 14.40, "vault": 14.55, "pbars": 14.45, "hbar": 14.30 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "rings": 14.25, "pbars": 14.15, "floor": 14.10 }
-      },
-      {
-        "name": "Shane Wiskus",
-        "team": "Stanford",
-        "scores": { "floor": 13.95, "vault": 14.15, "rings": 14.00, "pbars": 13.85 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 14.45 }
-      },
-      {
-        "name": "Caden Marshburn",
-        "team": "Stanford",
-        "scores": { "pommel": 14.00, "rings": 13.95 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 14.20, "pbars": 14.05 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 14.40, "pbars": 13.90 }
-      }
-    ]
-  },
-  {
-    "id": "illinois-feb-21",
-    "date": "2026-02-21",
-    "opponent": "Illinois",
-    "location": "Burnham Pavilion, Stanford, CA",
-    "isHome": true,
-    "result": "L",
-    "stanfordScore": 408.90,
-    "opponentScore": 413.45,
-    "events": {
-      "floor": { "stanford": 68.20, "opponent": 69.10 },
-      "pommel": { "stanford": 66.80, "opponent": 68.25 },
-      "rings": { "stanford": 68.35, "opponent": 68.90 },
-      "vault": { "stanford": 68.90, "opponent": 69.30 },
-      "pbars": { "stanford": 68.45, "opponent": 69.00 },
-      "hbar": { "stanford": 68.20, "opponent": 68.90 }
-    },
-    "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.30, "vault": 14.50, "hbar": 14.10 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 14.15, "vault": 14.40, "pbars": 14.25 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "rings": 14.05, "pbars": 13.95, "floor": 13.80 }
-      },
-      {
-        "name": "Shane Wiskus",
-        "team": "Stanford",
-        "scores": { "vault": 13.90, "rings": 13.75, "floor": 13.65 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 14.10 }
-      },
-      {
-        "name": "Caden Marshburn",
-        "team": "Stanford",
-        "scores": { "rings": 13.80, "pommel": 13.50 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 14.00, "pbars": 13.70 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 13.85, "pbars": 13.75 }
-      }
-    ]
-  },
-  {
-    "id": "cal-feb-28",
-    "date": "2026-02-28",
-    "opponent": "Cal",
+    "id": "cal-benefit-cup-jan-9",
+    "date": "2026-01-09",
+    "opponent": "Cal (Benefit Cup)",
     "location": "Haas Pavilion, Berkeley, CA",
     "isHome": false,
     "result": "W",
-    "stanfordScore": 419.75,
-    "opponentScore": 402.10,
+    "stanfordScore": 320.100,
+    "opponentScore": 309.700,
     "events": {
-      "floor": { "stanford": 70.00, "opponent": 67.10 },
-      "pommel": { "stanford": 68.75, "opponent": 66.00 },
-      "rings": { "stanford": 69.80, "opponent": 67.20 },
-      "vault": { "stanford": 70.30, "opponent": 67.50 },
-      "pbars": { "stanford": 70.10, "opponent": 67.30 },
-      "hbar": { "stanford": 70.80, "opponent": 67.00 }
+      "floor": { "stanford": 54.10, "opponent": 52.30 },
+      "pommel": { "stanford": 51.80, "opponent": 50.20 },
+      "rings": { "stanford": 53.60, "opponent": 51.70 },
+      "vault": { "stanford": 54.50, "opponent": 53.10 },
+      "pbars": { "stanford": 53.20, "opponent": 51.40 },
+      "hbar": { "stanford": 52.90, "opponent": 51.00 }
     },
     "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.65, "vault": 14.75, "hbar": 14.70, "rings": 14.40 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 14.50, "vault": 14.60, "pbars": 14.50, "hbar": 14.45 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "rings": 14.30, "pbars": 14.20, "floor": 14.15 }
-      },
-      {
-        "name": "Shane Wiskus",
-        "team": "Stanford",
-        "scores": { "floor": 14.05, "vault": 14.25, "rings": 14.10 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 14.50 }
-      },
-      {
-        "name": "Caden Marshburn",
-        "team": "Stanford",
-        "scores": { "pommel": 14.10, "rings": 14.00 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 14.30, "pbars": 14.15 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 14.50, "pbars": 14.05 }
-      }
+      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.15, "vault": 14.30, "rings": 13.85, "pbars": 13.95 } },
+      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.75, "rings": 13.60, "hbar": 13.50 } },
+      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.35, "rings": 13.45 } },
+      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.20 } },
+      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.30, "vault": 13.55, "pbars": 13.10 } },
+      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 12.90, "vault": 13.40, "pbars": 13.05 } },
+      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.20, "vault": 13.25, "pbars": 13.10 } },
+      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.05, "rings": 12.90, "vault": 13.15 } },
+      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 12.85, "pbars": 12.75, "hbar": 13.05 } },
+      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.00, "hbar": 13.15 } },
+      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.40, "pbars": 12.55 } },
+      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.10, "hbar": 13.20 } }
     ]
   },
   {
-    "id": "michigan-mar-7",
-    "date": "2026-03-07",
-    "opponent": "Michigan",
+    "id": "rocky-mountain-open-jan-17",
+    "date": "2026-01-17",
+    "opponent": "#2 Oklahoma",
+    "location": "Clune Arena, Colorado Springs, CO",
+    "isHome": false,
+    "result": "L",
+    "stanfordScore": 320.750,
+    "opponentScore": 323.950,
+    "events": {
+      "floor": { "stanford": 54.30, "opponent": 55.10 },
+      "pommel": { "stanford": 52.00, "opponent": 53.40 },
+      "rings": { "stanford": 53.45, "opponent": 53.80 },
+      "vault": { "stanford": 54.60, "opponent": 54.75 },
+      "pbars": { "stanford": 53.50, "opponent": 53.90 },
+      "hbar": { "stanford": 52.90, "opponent": 53.00 }
+    },
+    "athletes": [
+      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.25, "vault": 14.40, "rings": 13.80, "pbars": 14.05 } },
+      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.80, "rings": 13.65, "hbar": 13.45 } },
+      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.40, "rings": 13.50 } },
+      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.30 } },
+      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.35, "vault": 13.50, "pbars": 13.20 } },
+      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 12.95, "vault": 13.30, "pbars": 13.15 } },
+      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.25, "vault": 13.30, "pbars": 13.10 } },
+      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.10, "rings": 12.95, "vault": 13.20 } },
+      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 12.90, "pbars": 12.80, "hbar": 13.10 } },
+      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.05, "hbar": 13.20 } },
+      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.50, "pbars": 12.60 } },
+      { "name": "Marcus Pietarinen", "team": "Stanford", "scores": { "floor": 12.85, "vault": 13.00 } },
+      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.15, "hbar": 13.15 } }
+    ]
+  },
+  {
+    "id": "stanford-open-jan-24",
+    "date": "2026-01-24",
+    "opponent": "#6 Ohio State",
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
     "result": "W",
-    "stanfordScore": 421.50,
-    "opponentScore": 415.20,
+    "stanfordScore": 326.450,
+    "opponentScore": 318.050,
     "events": {
-      "floor": { "stanford": 70.30, "opponent": 69.20 },
-      "pommel": { "stanford": 69.10, "opponent": 68.30 },
-      "rings": { "stanford": 70.20, "opponent": 69.10 },
-      "vault": { "stanford": 70.50, "opponent": 69.60 },
-      "pbars": { "stanford": 70.30, "opponent": 69.50 },
-      "hbar": { "stanford": 71.10, "opponent": 69.50 }
+      "floor": { "stanford": 55.20, "opponent": 53.80 },
+      "pommel": { "stanford": 53.10, "opponent": 52.40 },
+      "rings": { "stanford": 54.30, "opponent": 52.90 },
+      "vault": { "stanford": 55.50, "opponent": 54.20 },
+      "pbars": { "stanford": 54.40, "opponent": 52.75 },
+      "hbar": { "stanford": 53.90, "opponent": 52.00 }
     },
     "athletes": [
-      {
-        "name": "Brody Malone",
-        "team": "Stanford",
-        "scores": { "floor": 14.70, "vault": 14.80, "hbar": 14.85, "rings": 14.45 }
-      },
-      {
-        "name": "Asher Hong",
-        "team": "Stanford",
-        "scores": { "floor": 14.55, "vault": 14.65, "pbars": 14.55, "hbar": 14.50 }
-      },
-      {
-        "name": "Curran Phillips",
-        "team": "Stanford",
-        "scores": { "rings": 14.35, "pbars": 14.25, "floor": 14.20 }
-      },
-      {
-        "name": "Shane Wiskus",
-        "team": "Stanford",
-        "scores": { "floor": 14.10, "vault": 14.30, "rings": 14.15, "pbars": 14.00 }
-      },
-      {
-        "name": "Riley Loos",
-        "team": "Stanford",
-        "scores": { "pommel": 14.55 }
-      },
-      {
-        "name": "Caden Marshburn",
-        "team": "Stanford",
-        "scores": { "pommel": 14.15, "rings": 14.05 }
-      },
-      {
-        "name": "Khoi Young",
-        "team": "Stanford",
-        "scores": { "vault": 14.35, "pbars": 14.20 }
-      },
-      {
-        "name": "Bram de Vries",
-        "team": "Stanford",
-        "scores": { "hbar": 14.55, "pbars": 14.10 }
-      }
+      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.40, "vault": 14.55, "rings": 14.00, "pbars": 14.20 } },
+      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 14.00, "rings": 13.80, "hbar": 13.65 } },
+      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.60, "rings": 13.70 } },
+      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.45 } },
+      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.55, "vault": 13.65, "pbars": 13.40 } },
+      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 13.25, "vault": 13.55, "pbars": 13.30 } },
+      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.40, "vault": 13.45, "pbars": 13.50 } },
+      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.15, "rings": 13.10, "vault": 13.35 } },
+      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 13.15, "pbars": 13.00, "hbar": 13.30 } },
+      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.20, "hbar": 13.45 } },
+      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.90, "pbars": 12.80 } },
+      { "name": "Marcus Pietarinen", "team": "Stanford", "scores": { "floor": 13.05, "vault": 13.20 } },
+      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.30, "hbar": 13.50 } },
+      { "name": "Jun Iwai", "team": "Stanford", "scores": { "floor": 12.80, "vault": 13.10 } }
     ]
   },
   {
-    "id": "ncaa-regionals-apr-4",
+    "id": "elite-canada-feb-6",
+    "date": "2026-02-06",
+    "opponent": "Team Canada",
+    "location": "WinSport Arena, Calgary, Alberta",
+    "isHome": false,
+    "result": "L",
+    "stanfordScore": 321.958,
+    "opponentScore": 322.528,
+    "events": {
+      "floor": { "stanford": 54.35, "opponent": 54.50 },
+      "pommel": { "stanford": 52.20, "opponent": 53.10 },
+      "rings": { "stanford": 53.70, "opponent": 53.85 },
+      "vault": { "stanford": 54.45, "opponent": 54.35 },
+      "pbars": { "stanford": 53.80, "opponent": 53.68 },
+      "hbar": { "stanford": 53.40, "opponent": 53.00 }
+    },
+    "athletes": [
+      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.30, "vault": 14.50, "rings": 13.90, "pbars": 14.10 } },
+      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.85, "rings": 13.70, "hbar": 13.55 } },
+      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.45, "rings": 13.55 } },
+      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.35 } },
+      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.40, "vault": 13.55, "pbars": 13.25 } },
+      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 13.10, "vault": 13.40, "pbars": 13.20 } },
+      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.30, "vault": 13.35, "pbars": 13.25 } },
+      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.00, "rings": 12.95, "vault": 13.25 } },
+      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 13.00, "pbars": 12.90, "hbar": 13.25 } },
+      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.10, "hbar": 13.30 } },
+      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.65, "pbars": 12.70 } },
+      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.20, "hbar": 13.30 } }
+    ]
+  },
+  {
+    "id": "stanford-intl-feb-28",
+    "date": "2026-02-28",
+    "opponent": "International All-Stars",
+    "location": "Burnham Pavilion, Stanford, CA",
+    "isHome": true,
+    "result": "W",
+    "stanfordScore": 323.900,
+    "opponentScore": 312.850,
+    "events": {
+      "floor": { "stanford": 54.80, "opponent": 52.60 },
+      "pommel": { "stanford": 52.65, "opponent": 51.30 },
+      "rings": { "stanford": 54.10, "opponent": 52.10 },
+      "vault": { "stanford": 55.20, "opponent": 53.50 },
+      "pbars": { "stanford": 54.05, "opponent": 51.85 },
+      "hbar": { "stanford": 53.10, "opponent": 51.50 }
+    },
+    "athletes": [
+      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.35, "vault": 14.55, "rings": 14.05, "pbars": 14.15 } },
+      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.90, "rings": 13.75, "hbar": 13.55 } },
+      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.55, "rings": 13.60 } },
+      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.45 } },
+      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.50, "vault": 13.65, "pbars": 13.35 } },
+      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 13.20, "vault": 13.50, "pbars": 13.30 } },
+      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.35, "vault": 13.40, "pbars": 13.25 } },
+      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.10, "rings": 13.05, "vault": 13.30 } },
+      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 13.10, "pbars": 12.95, "hbar": 13.20 } },
+      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.15, "hbar": 13.35 } },
+      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.75, "pbars": 12.80 } },
+      { "name": "Marcus Pietarinen", "team": "Stanford", "scores": { "floor": 13.00, "vault": 13.15 } },
+      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.25, "hbar": 13.40 } },
+      { "name": "Jun Iwai", "team": "Stanford", "scores": { "floor": 12.90, "vault": 13.15, "pbars": 12.70 } },
+      { "name": "Kiran Mandava", "team": "Stanford", "scores": { "rings": 12.85, "pommel": 12.55 } }
+    ]
+  },
+  {
+    "id": "senior-night-quad-mar-14",
+    "date": "2026-03-14",
+    "opponent": "California / Air Force / Team France",
+    "location": "Burnham Pavilion, Stanford, CA",
+    "isHome": true,
+    "status": "upcoming"
+  },
+  {
+    "id": "mpsf-championships-apr-4",
     "date": "2026-04-04",
-    "opponent": "NCAA Regionals",
-    "location": "TBD",
+    "opponent": "MPSF Championships",
+    "location": "Haas Pavilion, Berkeley, CA",
     "isHome": false,
     "status": "upcoming"
   },
@@ -476,7 +185,7 @@
     "id": "ncaa-championships-apr-17",
     "date": "2026-04-17",
     "opponent": "NCAA Championships",
-    "location": "TBD",
+    "location": "Huff Hall, Champaign, IL",
     "isHome": false,
     "status": "upcoming"
   }

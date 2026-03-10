@@ -81,6 +81,7 @@ app.get('/api/meets', (req, res) => {
   }
 });
 
+const REFRESH_SECRET = process.env.REFRESH_SECRET;
 let refreshInProgress = false;
 
 app.post('/api/refresh', async (req, res) => {
@@ -128,7 +129,6 @@ app.get('/healthz', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3889;
-const REFRESH_SECRET = process.env.REFRESH_SECRET;
 app.listen(PORT, () => {
   console.log(`🤸 Stanford Men's Gymnastics 2026 running on http://localhost:${PORT}`);
   if (!REFRESH_SECRET) {
