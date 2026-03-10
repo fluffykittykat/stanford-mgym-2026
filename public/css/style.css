@@ -11,30 +11,30 @@
   --cardinal:        #8C1515;
   --stanford-red:    #8C1515;
   --accent:          #B83A4B;
-  --light-accent:    #D44B4B;
+  --light-accent:    #c94a5a;
 
-  /* Surfaces */
-  --bg:              #100e0b;
-  --card-bg:         #2a241e;
-  --card-hover:      #332d26;
-  --border:          #3d3228;
+  /* Surfaces - LIGHT theme */
+  --bg:              #F5F1EE;
+  --card-bg:         #FFFFFF;
+  --card-hover:      #FAF7F5;
+  --border:          #DDD5CC;
 
-  /* Text */
-  --text:            #F5EFEA;
-  --text-muted:      #A08B78;
+  /* Text - dark on light */
+  --text:            #1A1208;
+  --text-muted:      #6B5744;
 
   /* Semantic */
-  --green:           #4caf82;
-  --red:             #e05c4a;
-  --yellow:          #f0c040;
-  --blue:            #4a90d9;
+  --green:           #2e7d52;
+  --red:             #8C1515;
+  --yellow:          #B8860B;
+  --blue:            #1a5276;
 
   /* Misc */
   --radius:          8px;
   --radius-lg:       12px;
   --radius-sm:       4px;
-  --shadow:          0 2px 8px rgba(0, 0, 0, .35);
-  --shadow-lg:       0 4px 20px rgba(0, 0, 0, .5);
+  --shadow:          0 2px 8px rgba(140, 21, 21, .10);
+  --shadow-lg:       0 4px 20px rgba(140, 21, 21, .15);
   --transition:      .25s ease;
   --font-heading:    'Oswald', sans-serif;
   --font-body:       'Inter', sans-serif;

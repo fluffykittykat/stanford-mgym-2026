@@ -637,7 +637,7 @@
     }).filter(g=>g.overallAvg).sort((a,b)=>b.overallAvg-a.overallAvg);
 
     function heatColor(val, teamAvg) {
-      if (!val || !teamAvg) return '#1e1e1e';
+      if (!val || !teamAvg) return '#E8E0D8';
       const diff = val - teamAvg;
       if (diff > 0.3) return 'rgba(46,204,113,0.55)';
       if (diff > 0.15) return 'rgba(46,204,113,0.35)';
@@ -654,7 +654,7 @@
           <span>🟥 Below team avg</span>
           <span style="margin:0 1rem;">⬛ Near avg</span>
           <span>🟩 Above team avg</span>
-          <span style="margin-left:1rem;color:#555">Team avgs: ${EVENTS.map(ev=>`${EVENT_SHORT[ev]} ${teamAvgs[ev]!=null?teamAvgs[ev].toFixed(3):'—'}`).join(' • ')}</span>
+          <span style="margin-left:1rem;color:#6B5744">Team avgs: ${EVENTS.map(ev=>`${EVENT_SHORT[ev]} ${teamAvgs[ev]!=null?teamAvgs[ev].toFixed(3):'—'}`).join(' • ')}</span>
         </div>
         <div class="heatmap-table-wrap">
           <table class="heatmap-table">
@@ -737,13 +737,13 @@
     for (let i = 0; i <= yTicks; i++) {
       const v = min + (i / yTicks) * (max - min);
       const y = yScale(v);
-      yLabels += `<text x="${pad.left - 8}" y="${y + 4}" text-anchor="end" fill="#999" font-size="11" font-family="Inter">${v.toFixed(1)}</text>`;
-      yGridLines += `<line x1="${pad.left}" y1="${y}" x2="${w - pad.right}" y2="${y}" stroke="#333" stroke-width="0.5"/>`;
+      yLabels += `<text x="${pad.left - 8}" y="${y + 4}" text-anchor="end" fill="#6B5744" font-size="11" font-family="Inter">${v.toFixed(1)}</text>`;
+      yGridLines += `<line x1="${pad.left}" y1="${y}" x2="${w - pad.right}" y2="${y}" stroke="#DDD5CC" stroke-width="0.5"/>`;
     }
 
     let xLabels = scoredMeets.map((m, i) => {
       const x = xScale(i);
-      return `<text x="${x}" y="${h - 5}" text-anchor="middle" fill="#999" font-size="9" font-family="Inter">${formatDate(m.date)}</text>`;
+      return `<text x="${x}" y="${h - 5}" text-anchor="middle" fill="#6B5744" font-size="9" font-family="Inter">${formatDate(m.date)}</text>`;
     }).join('');
 
     container.innerHTML = `
@@ -1168,11 +1168,11 @@
       const photo = photos[name];
       const photoHtml = photo
         ? `<img src="${photo}" class="profile-photo" alt="${name}" loading="lazy">`
-        : `<div class="gymnast-headshot-placeholder" style="width:80px;height:80px;font-size:1.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#333;color:#fff;margin:0 auto 1rem;">${name.split(' ').map(n=>n[0]).join('')}</div>`;
+        : `<div class="gymnast-headshot-placeholder" style="width:80px;height:80px;font-size:1.5rem;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#8C1515;color:#fff;margin:0 auto 1rem;">${name.split(' ').map(n=>n[0]).join('')}</div>`;
       const pills = [
         bio.position ? `<span style="background:#8C1515;color:#fff;padding:0.2rem 0.7rem;border-radius:999px;font-size:0.75rem;font-weight:700">${bio.position}</span>` : '',
-        bio.classYear ? `<span style="background:#333;color:#aaa;padding:0.2rem 0.7rem;border-radius:999px;font-size:0.75rem">${bio.classYear}</span>` : '',
-        bio.hometown ? `<span style="background:#222;color:#aaa;padding:0.2rem 0.7rem;border-radius:999px;font-size:0.75rem">📍 ${bio.hometown}</span>` : '',
+        bio.classYear ? `<span style="background:#E8E0D8;color:#6B5744;padding:0.2rem 0.7rem;border-radius:999px;font-size:0.75rem">${bio.classYear}</span>` : '',
+        bio.hometown ? `<span style="background:#E8E0D8;color:#6B5744;padding:0.2rem 0.7rem;border-radius:999px;font-size:0.75rem">📍 ${bio.hometown}</span>` : '',
       ].filter(Boolean).join(' ');
       detail.innerHTML = `
         <button class="back-btn" id="backFromBioOnly">← Back to Roster</button>
@@ -1181,8 +1181,8 @@
           <div>
             <h2 class="profile-name">${name}</h2>
             <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem">${pills}</div>
-            <div style="margin-top:0.75rem;color:#aaa;font-size:0.85rem">⚠️ Did not appear in 2026 season competition data.</div>
-            ${bio.major ? `<div style="margin-top:0.5rem;color:#999;font-size:0.8rem">🎓 ${bio.major}</div>` : ''}
+            <div style="margin-top:0.75rem;color:#6B5744;font-size:0.85rem">⚠️ Did not appear in 2026 season competition data.</div>
+            ${bio.major ? `<div style="margin-top:0.5rem;color:#6B5744;font-size:0.8rem">🎓 ${bio.major}</div>` : ''}
           </div>
         </div>`;
       document.getElementById('backFromBioOnly').addEventListener('click', () => {
@@ -1232,7 +1232,7 @@
         return `<td class="${isBest ? 'personal-best' : ''}">${m.scores[e].toFixed(3)}${isBest ? ' ★' : ''}</td>`;
       }).join('');
       const aa = m.scores.aa ? `<td>${m.scores.aa.toFixed(3)}</td>` : '<td style="color:var(--text-muted)">—</td>';
-      const haBadge = m.isHome ? '<span class="badge badge-home" style="font-size:0.65rem;padding:0.1rem 0.4rem;margin-left:0.3rem;">H</span>' : '<span class="badge" style="font-size:0.65rem;padding:0.1rem 0.4rem;margin-left:0.3rem;background:#333;color:#aaa;">A</span>';
+      const haBadge = m.isHome ? '<span class="badge badge-home" style="font-size:0.65rem;padding:0.1rem 0.4rem;margin-left:0.3rem;">H</span>' : '<span class="badge" style="font-size:0.65rem;padding:0.1rem 0.4rem;margin-left:0.3rem;background:#E8E0D8;color:#6B5744;">A</span>';
       return `<tr><td>${formatDate(m.date)}</td><td><span class="clickable-meet" data-meet-id="${m.meetId}">${m.opponent}</span>${haBadge}</td>${cells}${aa}</tr>`;
     }).join('');
 
@@ -1241,7 +1241,7 @@
     const pb = bios[p.name]||{};
     const heroPills = [];
     if(pb.position) heroPills.push(`<span style="background:#8C1515;color:#fff;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.75rem;font-weight:700;letter-spacing:0.03em">${pb.position}</span>`);
-    if(pb.classYear) heroPills.push(`<span style="background:rgba(255,255,255,0.12);color:#ccc;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.75rem;font-weight:600">${pb.classYear}</span>`);
+    if(pb.classYear) heroPills.push(`<span style="background:#E8E0D8;color:#6B5744;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.75rem;font-weight:600">${pb.classYear}</span>`);
 
     const heroInfoRows = [];
     if(pb.hometown) heroInfoRows.push(`<div style="color:rgba(255,255,255,0.7);font-size:0.85rem">📍 ${pb.hometown}</div>`);
@@ -1254,7 +1254,7 @@
         ${heroStatEvents.map(e => `
           <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:6px;padding:0.35rem 0.6rem;text-align:center;min-width:60px">
             <div style="font-size:0.6rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.05em;font-weight:600">${EVENT_SHORT[e]}</div>
-            <div style="font-size:0.95rem;font-weight:700;color:#8C1515;font-family:Oswald">${p.bests[e].toFixed(3)}</div>
+            <div style="font-size:0.95rem;font-weight:700;color:#fff;font-family:Oswald">${p.bests[e].toFixed(3)}</div>
           </div>`).join('')}
         ${p.bests.aa !== undefined ? `
           <div style="background:rgba(140,21,21,0.15);border:1px solid rgba(140,21,21,0.3);border-radius:6px;padding:0.35rem 0.6rem;text-align:center;min-width:60px">
@@ -1264,17 +1264,17 @@
       </div>` : '';
 
     const heroCardHtml = `
-      <div class="athlete-hero-card" style="display:flex;gap:1.5rem;padding:1.25rem;background:linear-gradient(135deg,#1a1a1a 0%,#0d0d0d 100%);border-radius:12px;border:1px solid rgba(255,255,255,0.08);align-items:flex-start">
+      <div class="athlete-hero-card" style="display:flex;gap:1.5rem;padding:1.25rem;background:linear-gradient(135deg,#8C1515 0%,#6b1010 100%);border-radius:12px;border:1px solid rgba(140,21,21,0.2);align-items:flex-start">
         ${gymnPhoto ? `
-        <div style="flex-shrink:0;width:200px;height:280px;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.08)">
+        <div style="flex-shrink:0;width:200px;height:280px;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(140,21,21,0.3),0 0 0 1px rgba(255,255,255,0.2)">
           <img src="${gymnPhoto}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;object-position:center;" loading="lazy">
         </div>` : ''}
         <div style="flex:1;display:flex;flex-direction:column;justify-content:center;min-height:${gymnPhoto ? '280px' : 'auto'};padding:0.25rem 0">
           <div style="font-family:Oswald;font-size:2rem;font-weight:700;color:#fff;line-height:1.1;letter-spacing:0.01em">${p.name}</div>
-          <div style="color:rgba(255,255,255,0.45);font-size:0.8rem;margin-top:0.3rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em">Stanford Men's Gymnastics</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.8rem;margin-top:0.3rem;font-weight:500;text-transform:uppercase;letter-spacing:0.08em">Stanford Men's Gymnastics</div>
           ${heroPills.length ? `<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.6rem;align-items:center">${heroPills.join('')}</div>` : ''}
           ${heroInfoRows.length ? `<div style="display:flex;flex-direction:column;gap:0.25rem;margin-top:0.75rem">${heroInfoRows.join('')}</div>` : ''}
-          <div style="color:var(--text-muted);font-size:0.8rem;margin-top:0.6rem;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.6rem">${p.totalMeets} competition days</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.8rem;margin-top:0.6rem;border-top:1px solid rgba(255,255,255,0.2);padding-top:0.6rem">${p.totalMeets} competition days</div>
           ${heroStatsHtml}
         </div>
       </div>`;
@@ -1330,10 +1330,10 @@
     function gfmt(n) { return typeof n==='number'&&!isNaN(n)?n.toFixed(3):'—'; }
     function gdiff(n) { if(typeof n!=='number'||isNaN(n)) return '—'; return (n>=0?'+':'')+n.toFixed(3); }
     function arrow(s) {
-      if(s===null) return '<span style="color:#aaa">—</span>';
+      if(s===null) return '<span style="color:#9B8A7A">—</span>';
       if(s>0.015) return '<span style="color:#2ecc71">▲</span>';
       if(s<-0.015) return '<span style="color:#e74c3c">▼</span>';
-      return '<span style="color:#aaa">►</span>';
+      return '<span style="color:#9B8A7A">►</span>';
     }
 
     const sm = meets.slice().sort((a,b)=>new Date(a.date)-new Date(b.date));
@@ -1476,7 +1476,7 @@
       </circle>`).join('');
 
     const xLabels = scores.map((s, i) => `
-      <text x="${xScale(i).toFixed(1)}" y="${h - 2}" text-anchor="middle" fill="#999" font-size="8" font-family="Inter">${labels[i]}</text>`).join('');
+      <text x="${xScale(i).toFixed(1)}" y="${h - 2}" text-anchor="middle" fill="#6B5744" font-size="8" font-family="Inter">${labels[i]}</text>`).join('');
 
     return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">
       <path d="${pathD}" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.6"/>
@@ -1679,7 +1679,7 @@
     function trendArrow(slope) {
       if (slope > 0.02) return '<span style="color:#2ecc71">▲ Improving</span>';
       if (slope < -0.02) return '<span style="color:#e74c3c">▼ Declining</span>';
-      return '<span style="color:#aaa">► Stable</span>';
+      return '<span style="color:#9B8A7A">► Stable</span>';
     }
 
     document.getElementById('mainContent').innerHTML = `
