@@ -1007,10 +1007,12 @@
 
       return `
         <div class="detail-event-card">
-          <div class="detail-event-title">${EVENT_NAMES[event]}</div>
-          <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
-            <span style="color:var(--accent);font-family:Oswald;font-weight:600;">${stanScore.toFixed(2)}</span>
-            <span style="color:var(--text-muted);font-size:0.85rem;">vs ${oppScore.toFixed(2)}</span>
+          <div class="dec-top">
+            <div class="detail-event-title">${EVENT_NAMES[event]}</div>
+            <div class="dec-score-row">
+              <span class="dec-score">${stanScore.toFixed(2)}</span>
+              <span class="dec-opp">vs ${oppScore.toFixed(2)}</span>
+            </div>
           </div>
           <div class="event-bar-track" style="margin-bottom:0.75rem;">
             <div class="event-bar-fill" style="width:${barPct}%"></div>

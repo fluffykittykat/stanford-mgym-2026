@@ -904,6 +904,29 @@ body.has-bottom-nav {
   border-radius: var(--radius);
   overflow: hidden;
 }
+.detail-event-card .dec-top {
+  padding: 12px 16px 8px;
+}
+.detail-event-card .detail-event-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.detail-event-card .dec-score-row {
+  display: flex;
+  justify-content: space-between;
+}
+.detail-event-card .dec-score {
+  color: var(--accent);
+  font-family: Oswald;
+  font-weight: 600;
+}
+.detail-event-card .dec-opp {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
 .detail-event-card .dec-header {
   padding: 12px 16px;
   border-bottom: 1px solid var(--border);
