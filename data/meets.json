@@ -168,10 +168,17 @@
   {
     "id": "senior-night-quad-mar-14",
     "date": "2026-03-14",
-    "opponent": "California / Air Force / Team France",
+    "opponent": "Team Quebec / California / Air Force / Team France",
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
-    "status": "upcoming"
+    "result": "W",
+    "stanfordScore": 322.700,
+    "matchResults": [
+      { "opponent": "Team Quebec", "result": "W", "stanfordScore": 322.700, "opponentScore": 305.300 },
+      { "opponent": "California", "result": "W", "stanfordScore": 322.700, "opponentScore": 311.550 },
+      { "opponent": "Air Force", "result": "W", "stanfordScore": 322.700, "opponentScore": 308.100 },
+      { "opponent": "Team France", "result": "W", "stanfordScore": 322.700, "opponentScore": 305.300 }
+    ]
   },
   {
     "id": "mpsf-championships-apr-4",

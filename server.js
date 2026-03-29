@@ -94,7 +94,7 @@ app.post('/api/refresh', async (req, res) => {
   refreshInProgress = true;
   try {
     const result = await new Promise((resolve, reject) => {
-      exec('python3 scripts/refresh_data.py', {
+      exec('python3 scripts/sync_gostanford.py && python3 scripts/refresh_data.py', {
         cwd: __dirname,
         timeout: 60000,
         encoding: 'utf-8',
