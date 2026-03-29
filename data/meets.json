@@ -817,6 +817,46 @@
     "lastRefreshed": "2026-03-29T21:03:09Z"
   },
   {
+    "id": "cal-william-mary-mar-28",
+    "date": "2026-03-28",
+    "opponent": "Cal / William & Mary",
+    "location": "Burnham Pavilion, Stanford, CA",
+    "isHome": true,
+    "status": "completed",
+    "result": "W",
+    "stanfordScore": 324.05,
+    "opponentScore": 310.35,
+    "image": "/images/meets/meet-2026-03-28.png",
+    "events": {
+      "floor": {
+        "stanford": 54.9,
+        "opponent": 52.8
+      },
+      "pommel": {
+        "stanford": 52.85,
+        "opponent": 51.5
+      },
+      "rings": {
+        "stanford": 54.2,
+        "opponent": 52.3
+      },
+      "vault": {
+        "stanford": 55.1,
+        "opponent": 53.8
+      },
+      "pbars": {
+        "stanford": 54.2,
+        "opponent": 52.1
+      },
+      "hbar": {
+        "stanford": 52.8,
+        "opponent": 51.85
+      }
+    },
+    "athletes": [],
+    "lastRefreshed": "2026-03-29T21:27:50Z"
+  },
+  {
     "id": "mpsf-championships-apr-4",
     "date": "2026-04-04",
     "opponent": "MPSF Championships",
