@@ -825,6 +825,26 @@
       return `<div class="event-pill ${pillClass}"><span class="ep-label">${EVENT_SHORT[e]}</span><span class="ep-score">${score.toFixed(2)}</span></div>`;
     }).join('');
 
+    // Render match results if available (multi-match format)
+    const matchResultsHtml = m.matchResults && m.matchResults.length ? `
+      <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.75rem; padding-top: 0.75rem;">
+        <div style="font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Match Results</div>
+        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+          ${m.matchResults.map(mr => `
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.85);">${mr.opponent}</span>
+              <div style="display: flex; align-items: center; gap: 0.4rem;">
+                <span style="font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.9);">${mr.stanfordScore.toFixed(1)}</span>
+                <span style="font-size: 0.7rem; color: rgba(255,255,255,0.5);">vs</span>
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">${mr.opponentScore.toFixed(1)}</span>
+                <span style="font-size: 0.7rem; font-weight: 700; color: #2ecc71; margin-left: 0.2rem;">${mr.result}</span>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    ` : '';
+
     return `
       <div class="meet-card${m.status === 'in_progress' ? ' meet-card-live' : ''}" data-meet-id="${m.id}" style="overflow:hidden;">
         ${mpThumb ? `<div class="meet-card-thumb" style="position:relative;height:110px;overflow:hidden;border-radius:8px 8px 0 0;margin:-1rem -1rem 0.75rem -1rem;">
@@ -845,6 +865,7 @@
           <div class="team-score"><div class="team-name">Opponent</div><div class="score">${m.opponentScore.toFixed(2)}</div></div>
         </div>
         <div class="event-pills-grid">${eventBars}</div>
+        ${matchResultsHtml}
       </div>`;
   }
 
@@ -1029,6 +1050,34 @@
     const mpData = meetPhotos[meet.date];
     const heroImg = mpData?.heroImage;
 
+    // Render match results if available (for multi-match meets)
+    const matchResultsDetailHtml = meet.matchResults && meet.matchResults.length ? `
+      <div class="section-card" style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(46, 204, 113, 0.04) 100%); border-left: 4px solid #2ecc71;">
+        <h2 class="section-title">🏆 Match Results</h2>
+        <div style="display: grid; gap: 0.75rem;">
+          ${meet.matchResults.map(mr => `
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255, 255, 255, 0.02); border-radius: 8px; border: 1px solid rgba(46, 204, 113, 0.1);">
+              <div>
+                <div style="font-weight: 600; font-size: 1rem; color: #fff;">${mr.opponent}</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <div style="text-align: right;">
+                  <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Stanford</div>
+                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${mr.stanfordScore.toFixed(2)}</div>
+                </div>
+                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); margin: 0 0.5rem;">vs</div>
+                <div style="text-align: left;">
+                  <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Opponent</div>
+                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${mr.opponentScore.toFixed(2)}</div>
+                </div>
+                <div style="font-size: 0.8rem; font-weight: 700; color: #2ecc71; padding: 0.35rem 0.75rem; background: rgba(46, 204, 113, 0.15); border-radius: 4px; margin-left: 0.5rem;">${mr.result}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    ` : '';
+
     content.innerHTML = `
       ${heroImg ? `<div class="meet-hero-photo" style="position:relative;width:100%;height:220px;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
         <img src="${heroImg}" alt="${meet.opponent} meet" style="width:100%;height:100%;object-fit:cover;object-position:center center;" loading="lazy" onerror="this.parentElement.style.display='none'">
@@ -1053,6 +1102,7 @@
           <div class="team-score"><div class="team-name">Opponent</div><div class="score" style="font-size:2rem;">${meet.opponentScore.toFixed(2)}</div></div>
         </div>
       </div>
+      ${matchResultsDetailHtml}
       ${(()=>{try{return renderMeetInsights(meet);}catch(e){return '';}})()}
       <h2 class="section-title" style="margin-bottom:1rem;">Event Breakdown</h2>
       <div class="detail-event-grid">${eventCards}</div>
