@@ -93,7 +93,20 @@ app.post('/api/refresh', async (req, res) => {
   }
   refreshInProgress = true;
   try {
-    const result = await new Promise((resolve, reject) => {
+    // Step 1: Sync with GoStanford to fetch latest meet data
+    const syncResult = await new Promise((resolve, reject) => {
+      exec('python3 scripts/sync_gostanford.py', {
+        cwd: __dirname,
+        timeout: 60000,
+        encoding: 'utf-8',
+      }, (err, stdout, stderr) => {
+        if (err) return reject(err);
+        resolve(stdout);
+      });
+    });
+
+    // Step 2: Refresh/update data timestamps and metadata
+    const refreshResult = await new Promise((resolve, reject) => {
       exec('python3 scripts/refresh_data.py', {
         cwd: __dirname,
         timeout: 60000,
@@ -107,14 +120,29 @@ app.post('/api/refresh', async (req, res) => {
     // Reload meets.json into memory
     loadMeetsData();
 
-    let summary;
+    let syncSummary = { raw: syncResult.trim() };
+    let refreshSummary = { raw: refreshResult.trim() };
+    
     try {
-      summary = JSON.parse(result.trim());
+      syncSummary = JSON.parse(syncResult.trim());
     } catch (e) {
-      summary = { raw: result.trim() };
+      // Keep the raw version
+    }
+    
+    try {
+      refreshSummary = JSON.parse(refreshResult.trim());
+    } catch (e) {
+      // Keep the raw version
     }
 
-    res.json({ success: true, summary });
+    res.json({ 
+      success: true, 
+      summary: {
+        sync: syncSummary,
+        refresh: refreshSummary,
+        meetsLoaded: meetsData.length
+      }
+    });
   } catch (err) {
     console.error('Refresh failed:', err.message);
     res.status(500).json({ success: false, error: err.message });
