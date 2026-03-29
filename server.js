@@ -93,7 +93,20 @@ app.post('/api/refresh', async (req, res) => {
   }
   refreshInProgress = true;
   try {
-    const result = await new Promise((resolve, reject) => {
+    // First, sync with GoStanford to fetch latest meet data
+    const syncResult = await new Promise((resolve, reject) => {
+      exec('python3 scripts/sync_gostanford.py', {
+        cwd: __dirname,
+        timeout: 60000,
+        encoding: 'utf-8',
+      }, (err, stdout, stderr) => {
+        if (err) return reject(err);
+        resolve(stdout);
+      });
+    });
+
+    // Then, refresh data timestamps and metadata
+    const refreshResult = await new Promise((resolve, reject) => {
       exec('python3 scripts/refresh_data.py', {
         cwd: __dirname,
         timeout: 60000,
@@ -109,9 +122,9 @@ app.post('/api/refresh', async (req, res) => {
 
     let summary;
     try {
-      summary = JSON.parse(result.trim());
+      summary = JSON.parse(refreshResult.trim());
     } catch (e) {
-      summary = { raw: result.trim() };
+      summary = { raw: refreshResult.trim() };
     }
 
     res.json({ success: true, summary });
