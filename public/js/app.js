@@ -812,11 +812,12 @@
         </div>`;
     }
 
-    const resultBadge = `<span class="badge badge-${m.result.toLowerCase()}">${m.result}</span>`;
+    const resultBadge = m.result ? `<span class="badge badge-${m.result.toLowerCase()}">${m.result}</span>` : '';
 
     const eventBars = EVENTS.map(e => {
       if (!m.events || !m.events[e]) return '';
       const score = m.events[e].stanford;
+      if (typeof score !== 'number' || score === null || score === undefined) return '';
       // Color tier based on men's per-event team scores (typical range 48–60)
       let pillClass = 'ep-avg';
       if (score >= 56)      pillClass = 'ep-great';
@@ -830,17 +831,20 @@
       <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.75rem; padding-top: 0.75rem;">
         <div style="font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Match Results</div>
         <div style="display: flex; flex-direction: column; gap: 0.4rem;">
-          ${m.matchResults.map(mr => `
+          ${m.matchResults.map(mr => {
+            if (!mr || mr.opponent === null || mr.opponent === undefined || mr.stanfordScore === null || mr.stanfordScore === undefined || mr.opponentScore === null || mr.opponentScore === undefined || mr.result === null || mr.result === undefined) return '';
+            return `
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.85);">${mr.opponent}</span>
+              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.85);">${mr.opponent || 'Unknown'}</span>
               <div style="display: flex; align-items: center; gap: 0.4rem;">
-                <span style="font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.9);">${mr.stanfordScore.toFixed(1)}</span>
+                <span style="font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.9);">${typeof mr.stanfordScore === 'number' ? mr.stanfordScore.toFixed(1) : '—'}</span>
                 <span style="font-size: 0.7rem; color: rgba(255,255,255,0.5);">vs</span>
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">${mr.opponentScore.toFixed(1)}</span>
-                <span style="font-size: 0.7rem; font-weight: 700; color: #2ecc71; margin-left: 0.2rem;">${mr.result}</span>
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">${typeof mr.opponentScore === 'number' ? mr.opponentScore.toFixed(1) : '—'}</span>
+                <span style="font-size: 0.7rem; font-weight: 700; color: #2ecc71; margin-left: 0.2rem;">${mr.result || '?'}</span>
               </div>
             </div>
-          `).join('')}
+          `;
+          }).join('')}
         </div>
       </div>
     ` : '';
@@ -860,9 +864,9 @@
           ${resultBadge}
         </div>
         <div class="meet-scores">
-          <div class="team-score"><div class="team-name">STANFORD</div><div class="score score-stanford">${m.stanfordScore.toFixed(2)}</div></div>
+          <div class="team-score"><div class="team-name">STANFORD</div><div class="score score-stanford">${typeof m.stanfordScore === 'number' ? m.stanfordScore.toFixed(2) : '—'}</div></div>
           <div class="score-vs">vs</div>
-          <div class="team-score"><div class="team-name">Opponent</div><div class="score">${m.opponentScore.toFixed(2)}</div></div>
+          <div class="team-score"><div class="team-name">Opponent</div><div class="score">${typeof m.opponentScore === 'number' ? m.opponentScore.toFixed(2) : '—'}</div></div>
         </div>
         <div class="event-pills-grid">${eventBars}</div>
         ${matchResultsHtml}
@@ -1055,25 +1059,28 @@
       <div class="section-card" style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(46, 204, 113, 0.04) 100%); border-left: 4px solid #2ecc71;">
         <h2 class="section-title">🏆 Match Results</h2>
         <div style="display: grid; gap: 0.75rem;">
-          ${meet.matchResults.map(mr => `
+          ${meet.matchResults.map(mr => {
+            if (!mr || mr.opponent === null || mr.opponent === undefined || mr.stanfordScore === null || mr.stanfordScore === undefined || mr.opponentScore === null || mr.opponentScore === undefined || mr.result === null || mr.result === undefined) return '';
+            return `
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255, 255, 255, 0.02); border-radius: 8px; border: 1px solid rgba(46, 204, 113, 0.1);">
               <div>
-                <div style="font-weight: 600; font-size: 1rem; color: #fff;">${mr.opponent}</div>
+                <div style="font-weight: 600; font-size: 1rem; color: #fff;">${mr.opponent || 'Unknown'}</div>
               </div>
               <div style="display: flex; align-items: center; gap: 1rem;">
                 <div style="text-align: right;">
                   <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Stanford</div>
-                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${mr.stanfordScore.toFixed(2)}</div>
+                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${typeof mr.stanfordScore === 'number' ? mr.stanfordScore.toFixed(2) : '—'}</div>
                 </div>
                 <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); margin: 0 0.5rem;">vs</div>
                 <div style="text-align: left;">
                   <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Opponent</div>
-                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${mr.opponentScore.toFixed(2)}</div>
+                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${typeof mr.opponentScore === 'number' ? mr.opponentScore.toFixed(2) : '—'}</div>
                 </div>
-                <div style="font-size: 0.8rem; font-weight: 700; color: #2ecc71; padding: 0.35rem 0.75rem; background: rgba(46, 204, 113, 0.15); border-radius: 4px; margin-left: 0.5rem;">${mr.result}</div>
+                <div style="font-size: 0.8rem; font-weight: 700; color: #2ecc71; padding: 0.35rem 0.75rem; background: rgba(46, 204, 113, 0.15); border-radius: 4px; margin-left: 0.5rem;">${mr.result || '?'}</div>
               </div>
             </div>
-          `).join('')}
+          `;
+          }).join('')}
         </div>
       </div>
     ` : '';
@@ -1097,9 +1104,9 @@
           ${resultBadge}
         </div>
         <div class="meet-scores" style="margin-top:1rem;">
-          <div class="team-score"><div class="team-name">STANFORD</div><div class="score score-stanford" style="font-size:2rem;">${meet.stanfordScore.toFixed(2)}</div></div>
+          <div class="team-score"><div class="team-name">STANFORD</div><div class="score score-stanford" style="font-size:2rem;">${typeof meet.stanfordScore === 'number' ? meet.stanfordScore.toFixed(2) : '—'}</div></div>
           <div class="score-vs">vs</div>
-          <div class="team-score"><div class="team-name">Opponent</div><div class="score" style="font-size:2rem;">${meet.opponentScore.toFixed(2)}</div></div>
+          <div class="team-score"><div class="team-name">Opponent</div><div class="score" style="font-size:2rem;">${typeof meet.opponentScore === 'number' ? meet.opponentScore.toFixed(2) : '—'}</div></div>
         </div>
       </div>
       ${matchResultsDetailHtml}
