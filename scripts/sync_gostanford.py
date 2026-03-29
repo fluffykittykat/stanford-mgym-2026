@@ -2,6 +2,19 @@
 """
 Sync meets.json with GoStanford schedule data.
 Deduplicates by date — updates existing meets rather than appending duplicates.
+
+Deduplication Strategy:
+- Meets are identified by date (unique key)
+- When syncing, if a meet with the same date exists, merge data intelligently
+- Preserves richer data: longer opponent strings, completed match results, etc.
+- Never overwrites complete data with incomplete data
+
+Usage:
+  python3 sync_gostanford.py          # Validate current meets.json
+  python3 -m sync_gostanford          # Run sync (when integrated with scraper)
+
+Testing:
+  python3 test_deduplication.py       # Run comprehensive test suite
 """
 
 import json
@@ -39,6 +52,12 @@ def merge_meet(existing, incoming):
             if key in ("matchResults", "athletes", "events"):
                 existing_val = merged.get(key)
                 if existing_val and not value:
+                    continue
+            # For opponent, prefer more detailed/longer version (more opponents listed)
+            if key == "opponent":
+                existing_val = merged.get(key, "")
+                # Keep existing if it's longer (more detailed)
+                if existing_val and len(existing_val) >= len(value):
                     continue
             # Don't overwrite a real result with None or upcoming status
             if key == "result" and merged.get("result") and not value:
