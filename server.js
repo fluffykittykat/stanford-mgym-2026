@@ -104,7 +104,7 @@ app.post('/api/refresh', async (req, res) => {
       });
     });
 
-    // Reload meets.json into memory
+    // Reload meets.json and meet_photos.json from disk
     loadMeetsData();
 
     let summary;
