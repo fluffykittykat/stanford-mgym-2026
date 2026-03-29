@@ -812,7 +812,7 @@
         </div>`;
     }
 
-    const resultBadge = m.result ? `<span class="badge badge-${m.result.toLowerCase()}">${m.result}</span>` : '';
+    const resultBadge = m.result && typeof m.result === 'string' ? `<span class="badge badge-${m.result.toLowerCase()}">${m.result}</span>` : '';
 
     const eventBars = EVENTS.map(e => {
       if (!m.events || !m.events[e]) return '';
