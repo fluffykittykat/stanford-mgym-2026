@@ -982,6 +982,57 @@
       </div>`;
   }
 
+  // ===== Multi-Team Meet Helpers =====
+  function isMultiTeamMeet(opponent) {
+    return opponent && opponent.includes(' / ');
+  }
+
+  function getOpponentsList(opponent) {
+    if (!opponent) return [];
+    return opponent.split(' / ').map(o => o.trim()).filter(o => o);
+  }
+
+  function generateMultiTeamMeetName(opponent, meetId) {
+    const opponents = getOpponentsList(opponent);
+    const count = opponents.length;
+    
+    // Try to extract a friendly name from the meet ID
+    if (meetId) {
+      const parts = meetId.split('-');
+      const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+      let nameEndIdx = parts.length;
+      
+      // Find where the date starts (month abbreviation)
+      for (let i = parts.length - 1; i >= 0; i--) {
+        if (months.includes(parts[i])) {
+          nameEndIdx = i;
+          break;
+        }
+      }
+      
+      // If we found a name part, use it
+      if (nameEndIdx > 0) {
+        const nameParts = parts.slice(0, nameEndIdx);
+        const friendlyName = nameParts.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+        return friendlyName;
+      }
+    }
+    
+    // Fallback to generic names
+    if (count === 0) return opponent || 'Multi-Team Meet';
+    if (count === 2) return `Dual Meet`;
+    if (count === 3) return `Tri Meet`;
+    if (count === 4) return `Quad Meet`;
+    return `${count}-Team Meet`;
+  }
+
+  function getMeetDisplayTitle(meet) {
+    if (isMultiTeamMeet(meet.opponent)) {
+      return generateMultiTeamMeetName(meet.opponent, meet.id);
+    }
+    return `vs ${meet.opponent}`;
+  }
+
   function showMeetDetail(meetId) {
     _meetDetailOrigin = currentView;
     const meet = meets.find(m => m.id === meetId);
@@ -996,12 +1047,12 @@
 
     if (meet.status === 'upcoming') {
       content.innerHTML = `
-        <div class="detail-hero">
+        <div class="detail-hero detail-hero-upcoming">
           <div class="meet-header">
-            <div>
-              <div class="meet-opponent" style="font-size:1.5rem;">vs ${meet.opponent}</div>
-              <div class="meet-date">${formatDateLong(meet.date)}</div>
-              <div class="meet-location">${meet.location}</div>
+            <div style="flex: 1;">
+              <div class="meet-opponent" style="font-size:1.5rem; font-weight: 600; margin-bottom: 0.5rem;">${getMeetDisplayTitle(meet)}</div>
+              <div class="meet-date" style="font-size: 0.95rem; margin-bottom: 0.25rem;">${formatDateLong(meet.date)}</div>
+              <div class="meet-location" style="font-size: 0.9rem;">${meet.location}</div>
             </div>
             <span class="badge badge-upcoming" style="font-size:1rem;padding:0.3rem 0.8rem;">UPCOMING</span>
           </div>
@@ -1056,27 +1107,26 @@
 
     // Render match results if available (for multi-match meets)
     const matchResultsDetailHtml = meet.matchResults && meet.matchResults.length ? `
-      <div class="section-card" style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.08) 0%, rgba(46, 204, 113, 0.04) 100%); border-left: 4px solid #2ecc71;">
+      <div class="section-card match-results-card">
         <h2 class="section-title">🏆 Match Results</h2>
-        <div style="display: grid; gap: 0.75rem;">
+        <div class="match-results-grid">
           ${meet.matchResults.map(mr => {
             if (!mr || mr.opponent === null || mr.opponent === undefined || mr.stanfordScore === null || mr.stanfordScore === undefined || mr.opponentScore === null || mr.opponentScore === undefined || mr.result === null || mr.result === undefined) return '';
+            const resultClass = mr.result === 'W' ? 'match-win' : mr.result === 'L' ? 'match-loss' : 'match-draw';
             return `
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255, 255, 255, 0.02); border-radius: 8px; border: 1px solid rgba(46, 204, 113, 0.1);">
-              <div>
-                <div style="font-weight: 600; font-size: 1rem; color: #fff;">${mr.opponent || 'Unknown'}</div>
-              </div>
-              <div style="display: flex; align-items: center; gap: 1rem;">
-                <div style="text-align: right;">
-                  <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Stanford</div>
-                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${typeof mr.stanfordScore === 'number' ? mr.stanfordScore.toFixed(2) : '—'}</div>
+            <div class="match-result-row ${resultClass}">
+              <div class="match-opponent-name">${mr.opponent || 'Unknown'}</div>
+              <div class="match-scores-group">
+                <div class="match-score stanford-score">
+                  <div class="match-score-label">Stanford</div>
+                  <div class="match-score-value">${typeof mr.stanfordScore === 'number' ? mr.stanfordScore.toFixed(2) : '—'}</div>
                 </div>
-                <div style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); margin: 0 0.5rem;">vs</div>
-                <div style="text-align: left;">
-                  <div style="font-size: 0.75rem; color: rgba(255, 255, 255, 0.6); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Opponent</div>
-                  <div style="font-size: 1.25rem; font-weight: 700; color: #fff;">${typeof mr.opponentScore === 'number' ? mr.opponentScore.toFixed(2) : '—'}</div>
+                <div class="match-vs">vs</div>
+                <div class="match-score opponent-score">
+                  <div class="match-score-label">Opponent</div>
+                  <div class="match-score-value">${typeof mr.opponentScore === 'number' ? mr.opponentScore.toFixed(2) : '—'}</div>
                 </div>
-                <div style="font-size: 0.8rem; font-weight: 700; color: #2ecc71; padding: 0.35rem 0.75rem; background: rgba(46, 204, 113, 0.15); border-radius: 4px; margin-left: 0.5rem;">${mr.result || '?'}</div>
+                <div class="match-result-badge ${resultClass}">${mr.result || '?'}</div>
               </div>
             </div>
           `;
@@ -1085,29 +1135,44 @@
       </div>
     ` : '';
 
+    // Determine if this is a multi-team meet
+    const isMultiTeam = isMultiTeamMeet(meet.opponent);
+    const meetName = getMeetDisplayTitle(meet);
+
+    // For multi-team meets, don't show the main opponent score
+    const scoresHtml = !isMultiTeam ? `
+      <div class="meet-scores">
+        <div class="team-score"><div class="team-name">STANFORD</div><div class="score score-stanford">${typeof meet.stanfordScore === 'number' ? meet.stanfordScore.toFixed(2) : '—'}</div></div>
+        <div class="score-vs">vs</div>
+        <div class="team-score"><div class="team-name">Opponent</div><div class="score">${typeof meet.opponentScore === 'number' ? meet.opponentScore.toFixed(2) : '—'}</div></div>
+      </div>
+    ` : `
+      <div class="meet-scores">
+        <div class="team-score"><div class="team-name">STANFORD</div><div class="score score-stanford">${typeof meet.stanfordScore === 'number' ? meet.stanfordScore.toFixed(2) : '—'}</div></div>
+        <div class="score-vs">vs</div>
+        <div class="team-score"><div class="team-name">MULTIPLE<br/>OPPONENTS</div><div class="score" style="font-size:1.25rem;opacity:0.7;">—</div></div>
+      </div>
+    `;
+
     content.innerHTML = `
       ${heroImg ? `<div class="meet-hero-photo" style="position:relative;width:100%;height:220px;overflow:hidden;border-radius:12px;margin-bottom:1rem;">
         <img src="${heroImg}" alt="${meet.opponent} meet" style="width:100%;height:100%;object-fit:cover;object-position:center center;" loading="lazy" onerror="this.parentElement.style.display='none'">
         <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 50%)"></div>
         <div style="position:absolute;bottom:0.75rem;left:1rem;right:1rem;display:flex;justify-content:space-between;align-items:flex-end;">
-          <span style="color:#fff;font-family:Oswald;font-size:1.1rem;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,0.8)">vs ${meet.opponent}</span>
+          <span style="color:#fff;font-family:Oswald;font-size:1.1rem;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,0.8)">${isMultiTeam ? meetName : 'vs ' + meet.opponent}</span>
           ${mpData?.recapUrl ? `<a href="${mpData.recapUrl}" target="_blank" style="color:rgba(255,255,255,0.75);font-size:0.72rem;text-decoration:none;background:rgba(0,0,0,0.4);padding:0.2rem 0.5rem;border-radius:4px">gostanford.com →</a>` : ''}
         </div>
       </div>` : ''}
       <div class="detail-hero">
         <div class="meet-header">
           <div>
-            <div class="meet-opponent" style="font-size:1.5rem;">vs ${meet.opponent}</div>
-            <div class="meet-date">${formatDateLong(meet.date)}</div>
-            <div class="meet-location">${meet.location}</div>
+            <div class="meet-opponent" style="font-size:1.5rem;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,0.3)">${isMultiTeam ? meetName : 'vs ' + meet.opponent}</div>
+            <div class="meet-date" style="color:rgba(255,255,255,0.8)">${formatDateLong(meet.date)}</div>
+            <div class="meet-location" style="color:rgba(255,255,255,0.75);font-size:0.95rem">${meet.location}</div>
           </div>
           ${resultBadge}
         </div>
-        <div class="meet-scores" style="margin-top:1rem;">
-          <div class="team-score"><div class="team-name">STANFORD</div><div class="score score-stanford" style="font-size:2rem;">${typeof meet.stanfordScore === 'number' ? meet.stanfordScore.toFixed(2) : '—'}</div></div>
-          <div class="score-vs">vs</div>
-          <div class="team-score"><div class="team-name">Opponent</div><div class="score" style="font-size:2rem;">${typeof meet.opponentScore === 'number' ? meet.opponentScore.toFixed(2) : '—'}</div></div>
-        </div>
+        ${scoresHtml}
       </div>
       ${matchResultsDetailHtml}
       ${(()=>{try{return renderMeetInsights(meet);}catch(e){return '';}})()}
