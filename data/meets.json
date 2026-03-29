@@ -131,6 +131,14 @@
     ]
   },
   {
+    "id": "winter-cup-feb-21",
+    "date": "2026-02-21",
+    "opponent": "Winter Cup (Multiple Teams)",
+    "location": "Burnham Pavilion, Stanford, CA",
+    "isHome": true,
+    "status": "upcoming"
+  },
+  {
     "id": "stanford-intl-feb-28",
     "date": "2026-02-28",
     "opponent": "International All-Stars",
@@ -189,8 +197,16 @@
     "status": "upcoming"
   },
   {
-    "id": "ncaa-championships-apr-17",
+    "id": "ncaa-qualifier-apr-17",
     "date": "2026-04-17",
+    "opponent": "NCAA Qualifier",
+    "location": "TBD",
+    "isHome": false,
+    "status": "upcoming"
+  },
+  {
+    "id": "ncaa-championships-apr-18",
+    "date": "2026-04-18",
     "opponent": "NCAA Championships",
     "location": "Huff Hall, Champaign, IL",
     "isHome": false,
