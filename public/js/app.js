@@ -828,19 +828,19 @@
 
     // Render match results if available (multi-match format)
     const matchResultsHtml = m.matchResults && m.matchResults.length ? `
-      <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 0.75rem; padding-top: 0.75rem;">
-        <div style="font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.6); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.05em;">Match Results</div>
-        <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+      <div class="match-results">
+        <div class="match-results-title">Match Results</div>
+        <div class="match-results-list">
           ${m.matchResults.map(mr => {
             if (!mr || mr.opponent === null || mr.opponent === undefined || mr.stanfordScore === null || mr.stanfordScore === undefined || mr.opponentScore === null || mr.opponentScore === undefined || mr.result === null || mr.result === undefined) return '';
             return `
-            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.35rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
-              <span style="font-size: 0.8rem; color: rgba(255,255,255,0.85);">${mr.opponent || 'Unknown'}</span>
-              <div style="display: flex; align-items: center; gap: 0.4rem;">
-                <span style="font-size: 0.8rem; font-weight: 600; color: rgba(255,255,255,0.9);">${typeof mr.stanfordScore === 'number' ? mr.stanfordScore.toFixed(1) : '—'}</span>
-                <span style="font-size: 0.7rem; color: rgba(255,255,255,0.5);">vs</span>
-                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.8);">${typeof mr.opponentScore === 'number' ? mr.opponentScore.toFixed(1) : '—'}</span>
-                <span style="font-size: 0.7rem; font-weight: 700; color: #2ecc71; margin-left: 0.2rem;">${mr.result || '?'}</span>
+            <div class="match-result-item">
+              <span class="match-result-opponent">${mr.opponent || 'Unknown'}</span>
+              <div class="match-result-scores">
+                <span class="match-result-stanford">${typeof mr.stanfordScore === 'number' ? mr.stanfordScore.toFixed(1) : '—'}</span>
+                <span class="match-result-vs">vs</span>
+                <span class="match-result-opponent-score">${typeof mr.opponentScore === 'number' ? mr.opponentScore.toFixed(1) : '—'}</span>
+                <span class="match-result-badge">${mr.result || '?'}</span>
               </div>
             </div>
           `;
