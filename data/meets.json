@@ -6,29 +6,138 @@
     "location": "Haas Pavilion, Berkeley, CA",
     "isHome": false,
     "result": "W",
-    "stanfordScore": 320.100,
-    "opponentScore": 309.700,
+    "stanfordScore": 320.1,
+    "opponentScore": 309.7,
     "events": {
-      "floor": { "stanford": 54.10, "opponent": 52.30 },
-      "pommel": { "stanford": 51.80, "opponent": 50.20 },
-      "rings": { "stanford": 53.60, "opponent": 51.70 },
-      "vault": { "stanford": 54.50, "opponent": 53.10 },
-      "pbars": { "stanford": 53.20, "opponent": 51.40 },
-      "hbar": { "stanford": 52.90, "opponent": 51.00 }
+      "floor": {
+        "stanford": 54.1,
+        "opponent": 52.3
+      },
+      "pommel": {
+        "stanford": 51.8,
+        "opponent": 50.2
+      },
+      "rings": {
+        "stanford": 53.6,
+        "opponent": 51.7
+      },
+      "vault": {
+        "stanford": 54.5,
+        "opponent": 53.1
+      },
+      "pbars": {
+        "stanford": 53.2,
+        "opponent": 51.4
+      },
+      "hbar": {
+        "stanford": 52.9,
+        "opponent": 51.0
+      }
     },
     "athletes": [
-      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.15, "vault": 14.30, "rings": 13.85, "pbars": 13.95 } },
-      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.75, "rings": 13.60, "hbar": 13.50 } },
-      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.35, "rings": 13.45 } },
-      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.20 } },
-      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.30, "vault": 13.55, "pbars": 13.10 } },
-      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 12.90, "vault": 13.40, "pbars": 13.05 } },
-      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.20, "vault": 13.25, "pbars": 13.10 } },
-      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.05, "rings": 12.90, "vault": 13.15 } },
-      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 12.85, "pbars": 12.75, "hbar": 13.05 } },
-      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.00, "hbar": 13.15 } },
-      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.40, "pbars": 12.55 } },
-      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.10, "hbar": 13.20 } }
+      {
+        "name": "Asher Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 14.15,
+          "vault": 14.3,
+          "rings": 13.85,
+          "pbars": 13.95
+        }
+      },
+      {
+        "name": "Nicolas Kuebler",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.75,
+          "rings": 13.6,
+          "hbar": 13.5
+        }
+      },
+      {
+        "name": "Arun Chhetri",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.35,
+          "rings": 13.45
+        }
+      },
+      {
+        "name": "Marcus Kushner",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.2
+        }
+      },
+      {
+        "name": "Zach Green",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.3,
+          "vault": 13.55,
+          "pbars": 13.1
+        }
+      },
+      {
+        "name": "Toma Murakawa",
+        "team": "Stanford",
+        "scores": {
+          "floor": 12.9,
+          "vault": 13.4,
+          "pbars": 13.05
+        }
+      },
+      {
+        "name": "Xander Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.2,
+          "vault": 13.25,
+          "pbars": 13.1
+        }
+      },
+      {
+        "name": "Cooper Kim",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.05,
+          "rings": 12.9,
+          "vault": 13.15
+        }
+      },
+      {
+        "name": "Kai Uemura",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 12.85,
+          "pbars": 12.75,
+          "hbar": 13.05
+        }
+      },
+      {
+        "name": "Wade Nelson",
+        "team": "Stanford",
+        "scores": {
+          "rings": 13.0,
+          "hbar": 13.15
+        }
+      },
+      {
+        "name": "David Shamah",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 12.4,
+          "pbars": 12.55
+        }
+      },
+      {
+        "name": "Reece Landsperger",
+        "team": "Stanford",
+        "scores": {
+          "vault": 13.1,
+          "hbar": 13.2
+        }
+      }
     ]
   },
   {
@@ -38,30 +147,146 @@
     "location": "Clune Arena, Colorado Springs, CO",
     "isHome": false,
     "result": "L",
-    "stanfordScore": 320.750,
-    "opponentScore": 323.950,
+    "stanfordScore": 320.75,
+    "opponentScore": 323.95,
     "events": {
-      "floor": { "stanford": 54.30, "opponent": 55.10 },
-      "pommel": { "stanford": 52.00, "opponent": 53.40 },
-      "rings": { "stanford": 53.45, "opponent": 53.80 },
-      "vault": { "stanford": 54.60, "opponent": 54.75 },
-      "pbars": { "stanford": 53.50, "opponent": 53.90 },
-      "hbar": { "stanford": 52.90, "opponent": 53.00 }
+      "floor": {
+        "stanford": 54.3,
+        "opponent": 55.1
+      },
+      "pommel": {
+        "stanford": 52.0,
+        "opponent": 53.4
+      },
+      "rings": {
+        "stanford": 53.45,
+        "opponent": 53.8
+      },
+      "vault": {
+        "stanford": 54.6,
+        "opponent": 54.75
+      },
+      "pbars": {
+        "stanford": 53.5,
+        "opponent": 53.9
+      },
+      "hbar": {
+        "stanford": 52.9,
+        "opponent": 53.0
+      }
     },
     "athletes": [
-      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.25, "vault": 14.40, "rings": 13.80, "pbars": 14.05 } },
-      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.80, "rings": 13.65, "hbar": 13.45 } },
-      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.40, "rings": 13.50 } },
-      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.30 } },
-      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.35, "vault": 13.50, "pbars": 13.20 } },
-      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 12.95, "vault": 13.30, "pbars": 13.15 } },
-      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.25, "vault": 13.30, "pbars": 13.10 } },
-      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.10, "rings": 12.95, "vault": 13.20 } },
-      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 12.90, "pbars": 12.80, "hbar": 13.10 } },
-      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.05, "hbar": 13.20 } },
-      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.50, "pbars": 12.60 } },
-      { "name": "Marcus Pietarinen", "team": "Stanford", "scores": { "floor": 12.85, "vault": 13.00 } },
-      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.15, "hbar": 13.15 } }
+      {
+        "name": "Asher Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 14.25,
+          "vault": 14.4,
+          "rings": 13.8,
+          "pbars": 14.05
+        }
+      },
+      {
+        "name": "Nicolas Kuebler",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.8,
+          "rings": 13.65,
+          "hbar": 13.45
+        }
+      },
+      {
+        "name": "Arun Chhetri",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.4,
+          "rings": 13.5
+        }
+      },
+      {
+        "name": "Marcus Kushner",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.3
+        }
+      },
+      {
+        "name": "Zach Green",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.35,
+          "vault": 13.5,
+          "pbars": 13.2
+        }
+      },
+      {
+        "name": "Toma Murakawa",
+        "team": "Stanford",
+        "scores": {
+          "floor": 12.95,
+          "vault": 13.3,
+          "pbars": 13.15
+        }
+      },
+      {
+        "name": "Xander Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.25,
+          "vault": 13.3,
+          "pbars": 13.1
+        }
+      },
+      {
+        "name": "Cooper Kim",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.1,
+          "rings": 12.95,
+          "vault": 13.2
+        }
+      },
+      {
+        "name": "Kai Uemura",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 12.9,
+          "pbars": 12.8,
+          "hbar": 13.1
+        }
+      },
+      {
+        "name": "Wade Nelson",
+        "team": "Stanford",
+        "scores": {
+          "rings": 13.05,
+          "hbar": 13.2
+        }
+      },
+      {
+        "name": "David Shamah",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 12.5,
+          "pbars": 12.6
+        }
+      },
+      {
+        "name": "Marcus Pietarinen",
+        "team": "Stanford",
+        "scores": {
+          "floor": 12.85,
+          "vault": 13.0
+        }
+      },
+      {
+        "name": "Reece Landsperger",
+        "team": "Stanford",
+        "scores": {
+          "vault": 13.15,
+          "hbar": 13.15
+        }
+      }
     ]
   },
   {
@@ -71,31 +296,154 @@
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
     "result": "W",
-    "stanfordScore": 326.450,
-    "opponentScore": 318.050,
+    "stanfordScore": 326.45,
+    "opponentScore": 318.05,
     "events": {
-      "floor": { "stanford": 55.20, "opponent": 53.80 },
-      "pommel": { "stanford": 53.10, "opponent": 52.40 },
-      "rings": { "stanford": 54.30, "opponent": 52.90 },
-      "vault": { "stanford": 55.50, "opponent": 54.20 },
-      "pbars": { "stanford": 54.40, "opponent": 52.75 },
-      "hbar": { "stanford": 53.90, "opponent": 52.00 }
+      "floor": {
+        "stanford": 55.2,
+        "opponent": 53.8
+      },
+      "pommel": {
+        "stanford": 53.1,
+        "opponent": 52.4
+      },
+      "rings": {
+        "stanford": 54.3,
+        "opponent": 52.9
+      },
+      "vault": {
+        "stanford": 55.5,
+        "opponent": 54.2
+      },
+      "pbars": {
+        "stanford": 54.4,
+        "opponent": 52.75
+      },
+      "hbar": {
+        "stanford": 53.9,
+        "opponent": 52.0
+      }
     },
     "athletes": [
-      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.40, "vault": 14.55, "rings": 14.00, "pbars": 14.20 } },
-      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 14.00, "rings": 13.80, "hbar": 13.65 } },
-      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.60, "rings": 13.70 } },
-      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.45 } },
-      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.55, "vault": 13.65, "pbars": 13.40 } },
-      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 13.25, "vault": 13.55, "pbars": 13.30 } },
-      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.40, "vault": 13.45, "pbars": 13.50 } },
-      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.15, "rings": 13.10, "vault": 13.35 } },
-      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 13.15, "pbars": 13.00, "hbar": 13.30 } },
-      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.20, "hbar": 13.45 } },
-      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.90, "pbars": 12.80 } },
-      { "name": "Marcus Pietarinen", "team": "Stanford", "scores": { "floor": 13.05, "vault": 13.20 } },
-      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.30, "hbar": 13.50 } },
-      { "name": "Jun Iwai", "team": "Stanford", "scores": { "floor": 12.80, "vault": 13.10 } }
+      {
+        "name": "Asher Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 14.4,
+          "vault": 14.55,
+          "rings": 14.0,
+          "pbars": 14.2
+        }
+      },
+      {
+        "name": "Nicolas Kuebler",
+        "team": "Stanford",
+        "scores": {
+          "floor": 14.0,
+          "rings": 13.8,
+          "hbar": 13.65
+        }
+      },
+      {
+        "name": "Arun Chhetri",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.6,
+          "rings": 13.7
+        }
+      },
+      {
+        "name": "Marcus Kushner",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.45
+        }
+      },
+      {
+        "name": "Zach Green",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.55,
+          "vault": 13.65,
+          "pbars": 13.4
+        }
+      },
+      {
+        "name": "Toma Murakawa",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.25,
+          "vault": 13.55,
+          "pbars": 13.3
+        }
+      },
+      {
+        "name": "Xander Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.4,
+          "vault": 13.45,
+          "pbars": 13.5
+        }
+      },
+      {
+        "name": "Cooper Kim",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.15,
+          "rings": 13.1,
+          "vault": 13.35
+        }
+      },
+      {
+        "name": "Kai Uemura",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.15,
+          "pbars": 13.0,
+          "hbar": 13.3
+        }
+      },
+      {
+        "name": "Wade Nelson",
+        "team": "Stanford",
+        "scores": {
+          "rings": 13.2,
+          "hbar": 13.45
+        }
+      },
+      {
+        "name": "David Shamah",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 12.9,
+          "pbars": 12.8
+        }
+      },
+      {
+        "name": "Marcus Pietarinen",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.05,
+          "vault": 13.2
+        }
+      },
+      {
+        "name": "Reece Landsperger",
+        "team": "Stanford",
+        "scores": {
+          "vault": 13.3,
+          "hbar": 13.5
+        }
+      },
+      {
+        "name": "Jun Iwai",
+        "team": "Stanford",
+        "scores": {
+          "floor": 12.8,
+          "vault": 13.1
+        }
+      }
     ]
   },
   {
@@ -108,27 +456,144 @@
     "stanfordScore": 321.958,
     "opponentScore": 322.528,
     "events": {
-      "floor": { "stanford": 54.35, "opponent": 54.50 },
-      "pommel": { "stanford": 52.20, "opponent": 53.10 },
-      "rings": { "stanford": 53.70, "opponent": 53.85 },
-      "vault": { "stanford": 54.45, "opponent": 54.35 },
-      "pbars": { "stanford": 53.80, "opponent": 53.68 },
-      "hbar": { "stanford": 53.40, "opponent": 53.00 }
+      "floor": {
+        "stanford": 54.35,
+        "opponent": 54.5
+      },
+      "pommel": {
+        "stanford": 52.2,
+        "opponent": 53.1
+      },
+      "rings": {
+        "stanford": 53.7,
+        "opponent": 53.85
+      },
+      "vault": {
+        "stanford": 54.45,
+        "opponent": 54.35
+      },
+      "pbars": {
+        "stanford": 53.8,
+        "opponent": 53.68
+      },
+      "hbar": {
+        "stanford": 53.4,
+        "opponent": 53.0
+      }
     },
     "athletes": [
-      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.30, "vault": 14.50, "rings": 13.90, "pbars": 14.10 } },
-      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.85, "rings": 13.70, "hbar": 13.55 } },
-      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.45, "rings": 13.55 } },
-      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.35 } },
-      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.40, "vault": 13.55, "pbars": 13.25 } },
-      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 13.10, "vault": 13.40, "pbars": 13.20 } },
-      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.30, "vault": 13.35, "pbars": 13.25 } },
-      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.00, "rings": 12.95, "vault": 13.25 } },
-      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 13.00, "pbars": 12.90, "hbar": 13.25 } },
-      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.10, "hbar": 13.30 } },
-      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.65, "pbars": 12.70 } },
-      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.20, "hbar": 13.30 } }
+      {
+        "name": "Asher Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 14.3,
+          "vault": 14.5,
+          "rings": 13.9,
+          "pbars": 14.1
+        }
+      },
+      {
+        "name": "Nicolas Kuebler",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.85,
+          "rings": 13.7,
+          "hbar": 13.55
+        }
+      },
+      {
+        "name": "Arun Chhetri",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.45,
+          "rings": 13.55
+        }
+      },
+      {
+        "name": "Marcus Kushner",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.35
+        }
+      },
+      {
+        "name": "Zach Green",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.4,
+          "vault": 13.55,
+          "pbars": 13.25
+        }
+      },
+      {
+        "name": "Toma Murakawa",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.1,
+          "vault": 13.4,
+          "pbars": 13.2
+        }
+      },
+      {
+        "name": "Xander Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.3,
+          "vault": 13.35,
+          "pbars": 13.25
+        }
+      },
+      {
+        "name": "Cooper Kim",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.0,
+          "rings": 12.95,
+          "vault": 13.25
+        }
+      },
+      {
+        "name": "Kai Uemura",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.0,
+          "pbars": 12.9,
+          "hbar": 13.25
+        }
+      },
+      {
+        "name": "Wade Nelson",
+        "team": "Stanford",
+        "scores": {
+          "rings": 13.1,
+          "hbar": 13.3
+        }
+      },
+      {
+        "name": "David Shamah",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 12.65,
+          "pbars": 12.7
+        }
+      },
+      {
+        "name": "Reece Landsperger",
+        "team": "Stanford",
+        "scores": {
+          "vault": 13.2,
+          "hbar": 13.3
+        }
+      }
     ]
+  },
+  {
+    "id": "winter-cup-feb-21",
+    "date": "2026-02-21",
+    "opponent": "Winter Cup",
+    "location": "Location TBD",
+    "isHome": false,
+    "status": "upcoming"
   },
   {
     "id": "stanford-intl-feb-28",
@@ -137,32 +602,163 @@
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
     "result": "W",
-    "stanfordScore": 323.900,
-    "opponentScore": 312.850,
+    "stanfordScore": 323.9,
+    "opponentScore": 312.85,
     "events": {
-      "floor": { "stanford": 54.80, "opponent": 52.60 },
-      "pommel": { "stanford": 52.65, "opponent": 51.30 },
-      "rings": { "stanford": 54.10, "opponent": 52.10 },
-      "vault": { "stanford": 55.20, "opponent": 53.50 },
-      "pbars": { "stanford": 54.05, "opponent": 51.85 },
-      "hbar": { "stanford": 53.10, "opponent": 51.50 }
+      "floor": {
+        "stanford": 54.8,
+        "opponent": 52.6
+      },
+      "pommel": {
+        "stanford": 52.65,
+        "opponent": 51.3
+      },
+      "rings": {
+        "stanford": 54.1,
+        "opponent": 52.1
+      },
+      "vault": {
+        "stanford": 55.2,
+        "opponent": 53.5
+      },
+      "pbars": {
+        "stanford": 54.05,
+        "opponent": 51.85
+      },
+      "hbar": {
+        "stanford": 53.1,
+        "opponent": 51.5
+      }
     },
     "athletes": [
-      { "name": "Asher Hong", "team": "Stanford", "scores": { "floor": 14.35, "vault": 14.55, "rings": 14.05, "pbars": 14.15 } },
-      { "name": "Nicolas Kuebler", "team": "Stanford", "scores": { "floor": 13.90, "rings": 13.75, "hbar": 13.55 } },
-      { "name": "Arun Chhetri", "team": "Stanford", "scores": { "pommel": 13.55, "rings": 13.60 } },
-      { "name": "Marcus Kushner", "team": "Stanford", "scores": { "pommel": 13.45 } },
-      { "name": "Zach Green", "team": "Stanford", "scores": { "floor": 13.50, "vault": 13.65, "pbars": 13.35 } },
-      { "name": "Toma Murakawa", "team": "Stanford", "scores": { "floor": 13.20, "vault": 13.50, "pbars": 13.30 } },
-      { "name": "Xander Hong", "team": "Stanford", "scores": { "floor": 13.35, "vault": 13.40, "pbars": 13.25 } },
-      { "name": "Cooper Kim", "team": "Stanford", "scores": { "floor": 13.10, "rings": 13.05, "vault": 13.30 } },
-      { "name": "Kai Uemura", "team": "Stanford", "scores": { "pommel": 13.10, "pbars": 12.95, "hbar": 13.20 } },
-      { "name": "Wade Nelson", "team": "Stanford", "scores": { "rings": 13.15, "hbar": 13.35 } },
-      { "name": "David Shamah", "team": "Stanford", "scores": { "pommel": 12.75, "pbars": 12.80 } },
-      { "name": "Marcus Pietarinen", "team": "Stanford", "scores": { "floor": 13.00, "vault": 13.15 } },
-      { "name": "Reece Landsperger", "team": "Stanford", "scores": { "vault": 13.25, "hbar": 13.40 } },
-      { "name": "Jun Iwai", "team": "Stanford", "scores": { "floor": 12.90, "vault": 13.15, "pbars": 12.70 } },
-      { "name": "Kiran Mandava", "team": "Stanford", "scores": { "rings": 12.85, "pommel": 12.55 } }
+      {
+        "name": "Asher Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 14.35,
+          "vault": 14.55,
+          "rings": 14.05,
+          "pbars": 14.15
+        }
+      },
+      {
+        "name": "Nicolas Kuebler",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.9,
+          "rings": 13.75,
+          "hbar": 13.55
+        }
+      },
+      {
+        "name": "Arun Chhetri",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.55,
+          "rings": 13.6
+        }
+      },
+      {
+        "name": "Marcus Kushner",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.45
+        }
+      },
+      {
+        "name": "Zach Green",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.5,
+          "vault": 13.65,
+          "pbars": 13.35
+        }
+      },
+      {
+        "name": "Toma Murakawa",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.2,
+          "vault": 13.5,
+          "pbars": 13.3
+        }
+      },
+      {
+        "name": "Xander Hong",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.35,
+          "vault": 13.4,
+          "pbars": 13.25
+        }
+      },
+      {
+        "name": "Cooper Kim",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.1,
+          "rings": 13.05,
+          "vault": 13.3
+        }
+      },
+      {
+        "name": "Kai Uemura",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 13.1,
+          "pbars": 12.95,
+          "hbar": 13.2
+        }
+      },
+      {
+        "name": "Wade Nelson",
+        "team": "Stanford",
+        "scores": {
+          "rings": 13.15,
+          "hbar": 13.35
+        }
+      },
+      {
+        "name": "David Shamah",
+        "team": "Stanford",
+        "scores": {
+          "pommel": 12.75,
+          "pbars": 12.8
+        }
+      },
+      {
+        "name": "Marcus Pietarinen",
+        "team": "Stanford",
+        "scores": {
+          "floor": 13.0,
+          "vault": 13.15
+        }
+      },
+      {
+        "name": "Reece Landsperger",
+        "team": "Stanford",
+        "scores": {
+          "vault": 13.25,
+          "hbar": 13.4
+        }
+      },
+      {
+        "name": "Jun Iwai",
+        "team": "Stanford",
+        "scores": {
+          "floor": 12.9,
+          "vault": 13.15,
+          "pbars": 12.7
+        }
+      },
+      {
+        "name": "Kiran Mandava",
+        "team": "Stanford",
+        "scores": {
+          "rings": 12.85,
+          "pommel": 12.55
+        }
+      }
     ]
   },
   {
@@ -172,12 +768,32 @@
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
     "result": "W",
-    "stanfordScore": 322.700,
+    "stanfordScore": 322.7,
     "matchResults": [
-      { "opponent": "Team Quebec", "result": "W", "stanfordScore": 322.700, "opponentScore": 305.300 },
-      { "opponent": "California", "result": "W", "stanfordScore": 322.700, "opponentScore": 311.550 },
-      { "opponent": "Air Force", "result": "W", "stanfordScore": 322.700, "opponentScore": 308.100 },
-      { "opponent": "Team France", "result": "W", "stanfordScore": 322.700, "opponentScore": 305.300 }
+      {
+        "opponent": "Team Quebec",
+        "result": "W",
+        "stanfordScore": 322.7,
+        "opponentScore": 305.3
+      },
+      {
+        "opponent": "California",
+        "result": "W",
+        "stanfordScore": 322.7,
+        "opponentScore": 311.55
+      },
+      {
+        "opponent": "Air Force",
+        "result": "W",
+        "stanfordScore": 322.7,
+        "opponentScore": 308.1
+      },
+      {
+        "opponent": "Team France",
+        "result": "W",
+        "stanfordScore": 322.7,
+        "opponentScore": 305.3
+      }
     ]
   },
   {
@@ -189,8 +805,16 @@
     "status": "upcoming"
   },
   {
-    "id": "ncaa-championships-apr-17",
+    "id": "ncaa-qualifier-apr-17",
     "date": "2026-04-17",
+    "opponent": "NCAA Qualifier",
+    "location": "Huff Hall, Champaign, IL",
+    "isHome": false,
+    "status": "upcoming"
+  },
+  {
+    "id": "ncaa-championships-apr-18",
+    "date": "2026-04-18",
     "opponent": "NCAA Championships",
     "location": "Huff Hall, Champaign, IL",
     "isHome": false,
