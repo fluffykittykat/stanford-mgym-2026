@@ -8,7 +8,6 @@
     "result": "W",
     "stanfordScore": 320.100,
     "opponentScore": 309.700,
-    "image": "/images/meets/meet-2026-01-09.png",
     "events": {
       "floor": { "stanford": 54.10, "opponent": 52.30 },
       "pommel": { "stanford": 51.80, "opponent": 50.20 },
@@ -35,13 +34,12 @@
   {
     "id": "rocky-mountain-open-jan-17",
     "date": "2026-01-17",
-    "opponent": "Oklahoma / Nebraska / Air Force",
+    "opponent": "#2 Oklahoma",
     "location": "Clune Arena, Colorado Springs, CO",
     "isHome": false,
     "result": "L",
     "stanfordScore": 320.750,
     "opponentScore": 323.950,
-    "image": "/images/meets/meet-2026-01-17.png",
     "events": {
       "floor": { "stanford": 54.30, "opponent": 55.10 },
       "pommel": { "stanford": 52.00, "opponent": 53.40 },
@@ -69,13 +67,12 @@
   {
     "id": "stanford-open-jan-24",
     "date": "2026-01-24",
-    "opponent": "Ohio State / California",
+    "opponent": "#6 Ohio State",
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
     "result": "W",
     "stanfordScore": 326.450,
     "opponentScore": 318.050,
-    "image": "/images/meets/meet-2026-01-24.png",
     "events": {
       "floor": { "stanford": 55.20, "opponent": 53.80 },
       "pommel": { "stanford": 53.10, "opponent": 52.40 },
@@ -110,7 +107,6 @@
     "result": "L",
     "stanfordScore": 321.958,
     "opponentScore": 322.528,
-    "image": "/images/meets/meet-2026-02-06.png",
     "events": {
       "floor": { "stanford": 54.35, "opponent": 54.50 },
       "pommel": { "stanford": 52.20, "opponent": 53.10 },
@@ -135,28 +131,14 @@
     ]
   },
   {
-    "id": "winter-cup-feb-21",
-    "date": "2026-02-21",
-    "opponent": "Winter Cup",
-    "location": "Louisville, KY",
-    "isHome": false,
-    "result": "W",
-    "stanfordScore": 0,
-    "opponentScore": 0,
-    "image": "/images/meets/meet-2026-02-21.png",
-    "events": {},
-    "athletes": []
-  },
-  {
     "id": "stanford-intl-feb-28",
     "date": "2026-02-28",
-    "opponent": "Intl All-Stars / California / Team Mexico / Team USA",
+    "opponent": "International All-Stars",
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
     "result": "W",
     "stanfordScore": 323.900,
     "opponentScore": 312.850,
-    "image": "/images/meets/meet-2026-02-28.png",
     "events": {
       "floor": { "stanford": 54.80, "opponent": 52.60 },
       "pommel": { "stanford": 52.65, "opponent": 51.30 },
@@ -186,11 +168,17 @@
   {
     "id": "senior-night-quad-mar-14",
     "date": "2026-03-14",
-    "opponent": "California / Air Force / Team France / Team Quebec",
+    "opponent": "Team Quebec / California / Air Force / Team France",
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
-    "image": "/images/meets/meet-2026-03-14.png",
-    "status": "upcoming"
+    "result": "W",
+    "stanfordScore": 322.700,
+    "matchResults": [
+      { "opponent": "Team Quebec", "result": "W", "stanfordScore": 322.700, "opponentScore": 305.300 },
+      { "opponent": "California", "result": "W", "stanfordScore": 322.700, "opponentScore": 311.550 },
+      { "opponent": "Air Force", "result": "W", "stanfordScore": 322.700, "opponentScore": 308.100 },
+      { "opponent": "Team France", "result": "W", "stanfordScore": 322.700, "opponentScore": 305.300 }
+    ]
   },
   {
     "id": "mpsf-championships-apr-4",
@@ -198,29 +186,14 @@
     "opponent": "MPSF Championships",
     "location": "Haas Pavilion, Berkeley, CA",
     "isHome": false,
-    "image": "/images/meets/meet-2026-04-04.png",
     "status": "upcoming"
   },
   {
-    "id": "ncaa-qualifier-apr-17",
+    "id": "ncaa-championships-apr-17",
     "date": "2026-04-17",
-    "opponent": "NCAA Qualifier",
+    "opponent": "NCAA Championships",
     "location": "Huff Hall, Champaign, IL",
     "isHome": false,
-    "image": "/images/meets/meet-2026-04-17.png",
     "status": "upcoming"
-  },
-  {
-    "id": "ncaa-championships-apr-18",
-    "date": "2026-04-18",
-    "opponent": "NCAA Championships",
-    "location": "Champaign, IL",
-    "isHome": false,
-    "result": null,
-    "stanfordScore": 0,
-    "opponentScore": 0,
-    "image": "/images/meets/meet-2026-04-18.png",
-    "events": {},
-    "athletes": []
   }
 ]
