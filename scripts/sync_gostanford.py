@@ -94,14 +94,44 @@ def sync(incoming_meets):
     }
 
 
-if __name__ == "__main__":
-    # When run directly, just validate and report on existing meets
-    meets = load_meets()
-    dates = [m["date"] for m in meets]
-    duplicates = [d for d in dates if dates.count(d) > 1]
-
+def validate_meets(meets):
+    """
+    Validate meets data for integrity.
+    Returns (is_valid, error_message).
+    """
+    if not meets:
+        return False, "No meets loaded"
+    
+    dates = [m.get("date") for m in meets]
+    
+    # Check for missing dates
+    missing_dates = [i for i, d in enumerate(dates) if d is None]
+    if missing_dates:
+        return False, f"Meets at indices {missing_dates} missing 'date' field"
+    
+    # Check for duplicates by date
+    duplicates = [d for d in set(dates) if dates.count(d) > 1]
     if duplicates:
-        print(f"WARNING: {len(set(duplicates))} duplicate date(s) found: {sorted(set(duplicates))}")
-        sys.exit(1)
-    else:
-        print(f"OK: {len(meets)} meets, 0 duplicates")
+        return False, f"Duplicate date(s) found: {sorted(duplicates)}"
+    
+    # Check for missing image field
+    no_images = [m.get("id", "?") for m in meets if not m.get("image")]
+    if no_images:
+        return False, f"Meets without images: {no_images}"
+    
+    # Validate date format (YYYY-MM-DD)
+    import re
+    bad_dates = [d for d in dates if not re.match(r'^\d{4}-\d{2}-\d{2}$', d)]
+    if bad_dates:
+        return False, f"Invalid date formats: {bad_dates}"
+    
+    return True, f"✓ Valid: {len(meets)} meets, 0 duplicates, all images present"
+
+
+if __name__ == "__main__":
+    # When run directly, validate and report on existing meets
+    meets = load_meets()
+    is_valid, message = validate_meets(meets)
+    
+    print(message)
+    sys.exit(0 if is_valid else 1)
