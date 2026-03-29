@@ -824,7 +824,10 @@
     "isHome": false,
     "image": "/images/meets/meet-2026-04-04.png",
     "status": "upcoming",
-    "lastRefreshed": "2026-03-29T21:03:09Z"
+    "lastRefreshed": "2026-03-29T21:03:09Z",
+    "stanfordScore": 0,
+    "opponentScore": 0,
+    "result": null
   },
   {
     "id": "ncaa-qualifier-apr-17",
@@ -834,7 +837,10 @@
     "isHome": false,
     "image": "/images/meets/meet-2026-04-17.png",
     "status": "upcoming",
-    "lastRefreshed": "2026-03-29T21:03:09Z"
+    "lastRefreshed": "2026-03-29T21:03:09Z",
+    "stanfordScore": 0,
+    "opponentScore": 0,
+    "result": null
   },
   {
     "id": "ncaa-championships-apr-18",
