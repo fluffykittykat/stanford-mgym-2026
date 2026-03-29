@@ -551,7 +551,7 @@ body.has-bottom-nav {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
   transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
   cursor: pointer;
 }
@@ -573,13 +573,34 @@ body.has-bottom-nav {
   font-size: 1rem;
   color: var(--text);
 }
+.meet-opponent {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.meet-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
 .meet-header .meet-date {
   font-size: .75rem;
+  color: var(--text-muted);
+}
+.meet-location {
+  font-size: 0.8rem;
   color: var(--text-muted);
 }
 
 .meet-scores {
   padding: 16px;
+  padding-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -608,6 +629,17 @@ body.has-bottom-nav {
   color: var(--text-muted);
 }
 
+.score {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.score-stanford {
+  color: var(--cardinal);
+}
+
 .score-vs {
   font-size: .85rem;
   color: var(--text-muted);
@@ -630,10 +662,9 @@ body.has-bottom-nav {
 .event-pills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-  margin-top: 10px;
-  margin-left: 8px;
-  margin-right: 8px;
+  gap: 8px;
+  padding: 0 16px;
+  margin-top: 12px;
   margin-bottom: 12px;
 }
 
@@ -706,6 +737,82 @@ body.has-bottom-nav {
   border-radius: 4px;
   background: linear-gradient(90deg, var(--cardinal), var(--accent));
   transition: width .6s ease;
+}
+
+/* ----------------------------------------------------------
+   10.5 Match Results (Multi-team meets)
+   ---------------------------------------------------------- */
+.match-results {
+  border-top: 1px solid var(--border);
+  margin-top: 12px;
+  padding: 12px 16px 0 16px;
+}
+
+.match-results-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.match-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.match-result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+}
+
+.match-result-item:last-child {
+  border-bottom: none;
+}
+
+.match-result-opponent {
+  color: var(--text);
+  font-weight: 500;
+  flex: 1;
+}
+
+.match-result-scores {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.match-result-stanford {
+  font-weight: 600;
+  color: var(--text);
+  min-width: 35px;
+  text-align: right;
+}
+
+.match-result-vs {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  opacity: 0.6;
+}
+
+.match-result-opponent-score {
+  color: var(--text-muted);
+  min-width: 35px;
+  text-align: right;
+}
+
+.match-result-badge {
+  font-weight: 700;
+  color: var(--green);
+  margin-left: 6px;
+  font-size: 0.75rem;
 }
 
 /* ----------------------------------------------------------
