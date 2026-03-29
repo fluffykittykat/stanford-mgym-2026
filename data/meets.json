@@ -189,8 +189,10 @@
     "opponent": "California / Air Force / Team France / Team Quebec",
     "location": "Burnham Pavilion, Stanford, CA",
     "isHome": true,
+    "status": "completed",
     "result": "W",
     "stanfordScore": 322.700,
+    "opponentScore": 308.075,
     "image": "/images/meets/meet-2026-03-14.png",
     "matchResults": [
       { "opponent": "Team Quebec", "result": "W", "stanfordScore": 322.700, "opponentScore": 305.300 },
